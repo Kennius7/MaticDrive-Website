@@ -26,7 +26,7 @@ useEffect(() => {
   return (
     <nav className={`w-full flex py-6 justify-between items-center navbar ${scrolled ? "scrolled" : ""}`}>
       <img src={logo} alt="flexdrive logo" className="w-[124px] h-[90px]" />
-      <div className="flex-1 font-poppins font-semibold ss:text-[72px] text-[20px] text-white">MaticDrive</div>
+      <div className="flex-1 font-poppins font-semibold ss:text-[44px] text-[30px] text-white">MaticDrive</div>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
