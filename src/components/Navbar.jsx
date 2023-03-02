@@ -7,32 +7,18 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const onScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  }
-
-  window.addEventListener("scroll", onScroll);
-
-  return () => window.removeEventListener("scroll", onScroll);
-}, [])
 
   return (
-    <nav className={`w-full flex py-6 justify-between items-center navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`w-full flex py-4 justify-between items-center navbar`}>
       <img src={logo} alt="flexdrive logo" className="w-[124px] h-[90px]" />
-      <div className="flex-1 font-poppins font-semibold ss:text-[44px] text-[30px] text-white">MaticDrive</div>
+      <div className="flex-1 font-poppins font-semibold ss:text-[44px] text-[30px] text-white"> <span className="text-gradient">Matic</span>Drive</div>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
+            className={`font-poppins font-normal cursor-pointer text-[18px] ${
               active === nav.title ? "text-white" : "text-dimWhite"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
