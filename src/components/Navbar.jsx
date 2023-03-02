@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className={`w-full flex py-4 justify-between items-center navbar`}>
       <img src={logo} alt="flexdrive logo" className="w-[124px] h-[90px]" />
-      <div className="flex-1 font-poppins font-semibold ss:text-[44px] ss:mr-3 text-[30px] text-white"> <span className="text-gradient">Matic</span>Drive</div>
+      <div className="flex-1 font-poppins font-semibold ss:text-[32px] ss:mr-3 text-[30px] text-white"> <span className="text-gradient">Matic</span>Drive</div>
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
