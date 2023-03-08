@@ -19,11 +19,11 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const AboutUs = () =>  (
-  <div id="features" className="flex flex-col">
+  <div id="features" className="flex flex-col my-10">
     <div className="">
       <div className={layout.sectionInfo}>
         <div className={`${styles.heading2} text-[30]`}>
-          About MATIC<span className="text-gradient">DRIVE</span>.
+          About MATIC<span className="text-gradient" >DRIVE</span> 
         </div>
 
         <p className={`${styles.paragraph} max-w-[470px] mt-5 tracking-wider`}>
