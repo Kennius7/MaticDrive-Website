@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
 import Banner from "./Banner";
-import Contacts from "./ContactUs";
+import ContactUs from "./ContactUs";
 
 
 export {
@@ -24,5 +24,5 @@ export {
   Testimonials,
   Hero,
   Banner,
-  Contacts,
+  ContactUs,
 };

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-export const Contact = () => {
+const ContactUs = () => {
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -91,3 +91,6 @@ export const Contact = () => {
     </section>
   )
 }
+
+
+export default ContactUs;
