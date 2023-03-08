@@ -20,10 +20,12 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
-import people01 from "./people01.png";
-import people02 from "./people02.png";
-import people03 from "./people03.png";
-import MaticVid from "./MaticDriveVid.mp4"
+import people01 from "./team1.jpg";
+import people02 from "./team2.jpg";
+import people03 from "./team3.jpg";
+import MaticVid from "./MaticDriveVid.mp4";
+import MaticProto from "./MaticProto.jpg";
+
 
 export {
   airbnb,
@@ -52,4 +54,5 @@ export {
   people02,
   people03,
   MaticVid,
+  MaticProto,
 };

@@ -1,6 +1,6 @@
 import styles from "../style";
 import { discount, robot } from "../assets";
-import GetStarted from "./GetStarted";
+
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
           <img src={discount} alt="discount" className="w-[32px] h-[32px]" />
           <p className={`${styles.paragraph} ml-2`}>
             <span className="text-white">Get</span> the best prices for our{" "}
-            <span className="text-white">MaticDrive</span> Cars
+            <span className="text-white">MaticDrive</span> Cars <span className="text-gradient">soon!</span>
           </p>
         </div>
 
@@ -25,9 +25,9 @@ const Hero = () => {
           For Africa.
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          Our team of experts use AI and innovative Sensor technology
-          to ensure and safety in one vehicle or more! The next phase in 
-          Driverless car technology is evolving and we are ahead of the curve!
+          Our team of experts use unique data peculiar to Africa and innovative AI and Sensor technology
+          to ensure ease of transport and safety in a vehicle! The next phase in AV technology is evolving 
+          and we are ahead of the curve!
         </p>
       </div>
 

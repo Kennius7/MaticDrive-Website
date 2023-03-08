@@ -1,12 +1,12 @@
 import Navbar from "./Navbar";
-import Billing from "./Billing";
+import Features from "./Features";
 import CardDeal from "./CardDeal";
-import Business from "./Business";
+import AboutUs from "./AboutUs";
 import Clients from "./Clients";
 import CTA from "./CTA";
 import Stats from "./Stats";
 import Footer from "./Footer";
-import Testimonials from "./Testimonials";
+import TeamPlayers from "./TeamPlayers";
 import Hero from "./Hero";
 import Banner from "./Banner";
 import ContactUs from "./ContactUs";
@@ -14,14 +14,14 @@ import ContactUs from "./ContactUs";
 
 export {
   Navbar,
-  Billing,
+  Features,
   CardDeal,
-  Business,
+  AboutUs,
   Clients,
   CTA,
   Stats,
   Footer,
-  Testimonials,
+  TeamPlayers,
   Hero,
   Banner,
   ContactUs,

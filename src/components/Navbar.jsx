@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className={`w-full flex justify-between items-center navbar`}>
-      <img src={logo} alt="flexdrive logo" className="w-[170px] h-[120px]" />
+      <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[180px] ss:h-[120px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
