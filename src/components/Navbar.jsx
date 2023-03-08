@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
-
 
 
 const Navbar = () => {
@@ -10,9 +9,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`w-full flex py-4 justify-between items-center navbar`}>
-      <img src={logo} alt="flexdrive logo" className="w-[124px] h-[90px]" />
-      <div className="flex-1 font-poppins font-semibold ss:text-[32px] ss:mr-3 text-[30px] text-white"> <span className="text-gradient">Matic</span>Drive</div>
+    <nav className={`w-full flex justify-between items-center navbar`}>
+      <img src={logo} alt="flexdrive logo" className="w-[170px] h-[120px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
@@ -39,7 +37,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-black-gradient absolute top-20 z-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
