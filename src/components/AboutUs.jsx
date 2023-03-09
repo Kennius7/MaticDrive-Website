@@ -2,6 +2,8 @@ import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
 
+
+
 const FeatureCard = ({ icon, title, content, index }) => (
   <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
@@ -19,7 +21,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const AboutUs = () =>  (
-  <section id="features" className={layout.section}>
+  <section id="features" className={`my-20 ${layout.section}`}>
     <div className={layout.sectionInfo}>
       <div className={`${styles.heading2} text-[30]`}>
         About MATIC<span className="text-gradient" >DRIVE</span> 

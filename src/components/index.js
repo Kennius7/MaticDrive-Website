@@ -3,7 +3,7 @@ import Features from "./Features";
 import CardDeal from "./CardDeal";
 import AboutUs from "./AboutUs";
 import Clients from "./Clients";
-import CTA from "./CTA";
+import Partnership from "./Partnership";
 import Stats from "./Stats";
 import Footer from "./Footer";
 import TeamPlayers from "./TeamPlayers";
@@ -18,7 +18,7 @@ export {
   CardDeal,
   AboutUs,
   Clients,
-  CTA,
+  Partnership,
   Stats,
   Footer,
   TeamPlayers,

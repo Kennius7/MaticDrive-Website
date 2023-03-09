@@ -19,7 +19,7 @@ export const navLinks = [
   },
   {
     id: "partners",
-    title: "Partnerships",
+    title: "Partner With Us",
   },
   {
     id: "contact",
@@ -45,7 +45,7 @@ export const features = [
   {
     id: "feature-3",
     icon: send,
-    title: "WHAT WE WANT TO DO",
+    title: "WHAT WE DO",
     content:
       "A balance transfer credit card can save you a lot of money in interest charges.",
   },

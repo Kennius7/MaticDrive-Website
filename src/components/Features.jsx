@@ -1,8 +1,10 @@
-import { apple, MaticProto, google } from "../assets";
+import { MaticProto } from "../assets";
 import styles, { layout } from "../style";
 
+
+
 const Features = () => (
-  <section id="product" className={layout.sectionReverse}>
+  <section id="product" className={`my-20 ${layout.sectionReverse}`}>
     <div className={layout.sectionImgReverse}>
       <img src={MaticProto} alt="billing" className="w-[100%] h-[80%] rounded-lg bg-gradient-to-t relative z-[5]" />
 

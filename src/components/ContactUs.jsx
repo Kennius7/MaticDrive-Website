@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import styles, { layout } from "../style";
 
 
 const ContactUs = () => {
@@ -42,7 +42,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="contact" id="connect">
+    <section className={`my-20 ${layout.section}`} id="connect">
       <div>
         <div className="align-items-center">
           <div size={12} md={6}>
