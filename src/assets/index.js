@@ -26,6 +26,7 @@ import people03 from "./team3.jpg";
 import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
 import MaticVid2 from "./AVTesting.mp4";
+import contactImg from "./contactImg.svg";
 
 
 export {
@@ -57,4 +58,5 @@ export {
   MaticVid1,
   MaticVid2,
   MaticProto,
+  contactImg,
 };
