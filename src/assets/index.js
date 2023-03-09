@@ -6,10 +6,10 @@ import coinbase from "./coinbase.png";
 import dropbox from "./dropbox.png";
 import logo from "./MaticDriveNewLogo2222.png";
 import quotes from "./quotes.svg";
-import robot from "./AICarPics.png";
-import send from "./Send.svg";
-import shield from "./Shield.svg";
-import star from "./Star.svg";
+import robot from "./AVPicture.png";
+import send from "./MaticIconSmall1.png";
+import shield from "./MaticIconSmall1.png";
+import star from "./MaticIconSmall1.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import google from "./google.svg";
@@ -23,8 +23,9 @@ import twitter from "./twitter.svg";
 import people01 from "./team1.jpg";
 import people02 from "./team2.jpg";
 import people03 from "./team3.jpg";
-import MaticVid from "./MaticDriveVid.mp4";
+import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
+import MaticVid2 from "./AVTesting.mp4";
 
 
 export {
@@ -53,6 +54,7 @@ export {
   people01,
   people02,
   people03,
-  MaticVid,
+  MaticVid1,
+  MaticVid2,
   MaticProto,
 };
