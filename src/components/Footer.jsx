@@ -12,12 +12,12 @@ const Footer = () => (
         <img src={logo} alt="Matic-Drive-Logo" className="w-[200px] h-[100px] object-contain"/>
       </div>
 
-      <div className="font-poppins font-normal text-[15px] leading-[27px] text-white text-center">
+      <div className="font-poppins font-normal text-[15px] leading-[27px] text-primary text-center">
         Copyright Ⓒ 2022 MaticDrive. All Rights Reserved.
       </div>
     </div>
 
-    <div className="flex flex-row md:mt-10 mt-6">
+    <div className="flex flex-row md:mt-10 mt-6 feature-card py-6 px-10 rounded-lg">
       {socialMedia.map((social, index) => (
         <img
           key={social.id}

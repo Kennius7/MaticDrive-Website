@@ -40,7 +40,12 @@ export const features = [
     icon: shield,
     title: "HOW MATICDRIVE STARTED",
     content:
-      "We take proactive steps make sure your information and transactions are secure.",
+      `The idea to build an AI Technology largely fitted for the African unique environment 
+      was first conceived in February, 2023 by Esther Eruchie and Daniel Paul. {"\n"} Matic Drive 
+      was born out of a deep need to mitigate the senseless loss of human lives and properties 
+      on transit, due to bad road structure, poor network and traffic systems. We are taking 
+      giant strides to ensure that vehicles are built with the African terrain in mind, which 
+      will reduce the number of accidents that occur annually.`,
   },
   {
     id: "feature-3",

@@ -3,26 +3,26 @@ import { AboutUs, CardDeal, Clients, Partnership, Footer, Navbar, Stats, TeamPla
 
 
 const App = () => (
-  <div className="bg-primary w-full overflow-hidden absolute z-10">
+  <div className="bg-dimWhite w-full overflow-hidden absolute z-10">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />
       </div>
     </div>
 
-    <div className={`bg-primary ${styles.flexStart}`}>
+    <div className={`bg-dimWhite ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Banner />
       </div>
     </div>
 
-    <div className={`bg-primary ${styles.flexStart}`}>
+    <div className={`bg-dimWhite ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Hero />
       </div>
     </div>
     
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`bg-dimWhite ${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <AboutUs />
         <Features />
