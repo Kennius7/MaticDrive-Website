@@ -62,7 +62,7 @@ const TeamPlayers = () => (
         rewindWithAnimation={false}
         rtl={false}
         shouldResetAutoplay
-        showDots={true}
+        showDots={false}
         sliderClass=""
         slidesToSlide={1}
         swipeable
