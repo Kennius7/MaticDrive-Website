@@ -9,10 +9,10 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar ss:bg-transparent bg-gray-300`}>
+    <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar md:bg-transparent bg-gray-300`}>
       <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[180px] ss:h-[120px]" />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -26,11 +26,11 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
+      <div className="md:hidden flex flex-1 justify-end items-center pr-4">
         <img
           src={toggle ? close : menu}
           alt="menu"
-          className="w-[28px] h-[28px] object-contain"
+          className="w-[32px] h-[32px] object-contain"
           onClick={() => setToggle(!toggle)}
         />
 
