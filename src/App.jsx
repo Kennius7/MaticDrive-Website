@@ -5,7 +5,7 @@ import { AboutUs, CardDeal, Clients, Partnership, Footer, Navbar, Stats, TeamPla
 
 const App = () => (
   <div className="bg-dimWhite w-full overflow-hidden absolute z-10">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`${styles.navPaddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />
       </div>

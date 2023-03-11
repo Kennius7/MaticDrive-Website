@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`w-full flex justify-between items-center navbar`}>
+    <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar ss:bg-transparent bg-gray-300`}>
       <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[180px] ss:h-[120px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -26,7 +26,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="sm:hidden flex flex-1 justify-end items-center pr-4">
         <img
           src={toggle ? close : menu}
           alt="menu"
