@@ -129,12 +129,16 @@
 }
 
 .feedback-card2 {
+  background: var(--black-gradient);
+}
+
+.feedback-card3 {
   background: var(--white-gradient);
 }
 
-.feedback-container .feedback-card:last-child {
+/* .feedback-container .feedback-card:last-child {
   margin-right: 0px;
-}
+} */
 
 .feedback-card {
   background: transparent;

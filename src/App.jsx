@@ -2,6 +2,7 @@ import styles from "./style";
 import { AboutUs, CardDeal, Clients, Partnership, Footer, Navbar, Stats, TeamPlayers, Hero, Banner, ContactUs, Features } from "./components";
 
 
+
 const App = () => (
   <div className="bg-dimWhite w-full overflow-hidden absolute z-10">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
