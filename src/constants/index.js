@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people05, people06, people07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -33,26 +33,21 @@ export const features = [
     icon: star,
     title: "WHO WE ARE",
     content:
-      "The best credit cards offer some tantalizing combinations of promotions and prizes",
+      "At Matic Drive, we believe that the power of technology can transform the way we live, work, and move, and we are proud to be at the forefront of this change. \nWe are committed to building partnerships with government agencies, private companies, and local communities to promote the adoption of autonomous vehicles and pave the way for a brighter, more sustainable future for all Africans.",
   },
   {
     id: "feature-2",
     icon: shield,
     title: "HOW MATICDRIVE STARTED",
     content:
-      `The idea to build an AI Technology largely fitted for the African unique environment 
-      was first conceived in February, 2023 by Esther Eruchie and Daniel Paul. {"\n"} Matic Drive 
-      was born out of a deep need to mitigate the senseless loss of human lives and properties 
-      on transit, due to bad road structure, poor network and traffic systems. We are taking 
-      giant strides to ensure that vehicles are built with the African terrain in mind, which 
-      will reduce the number of accidents that occur annually.`,
+      "The idea to build an AI Technology largely fitted for the African unique environment was first conceived in February, 2023 by Esther Eruchie and Daniel Paul. \nMatic Drive was born out of a deep need to mitigate the senseless loss of human lives and properties on transit, due to bad road structure, poor network and traffic systems. \nWe are taking giant strides to ensure that vehicles are built with the African terrain in mind, which will reduce the number of accidents that occur annually.",
   },
   {
     id: "feature-3",
     icon: send,
     title: "WHAT WE DO",
     content:
-      "A balance transfer credit card can save you a lot of money in interest charges.",
+      "Our Goal is to build a robust AI technology suitable for the African environment, while ensuring safety and providing comfort. \nWe are committed to building partnerships with government agencies, private companies, and local communities to promote the adoption of autonomous vehicles and pave the way for a brighter, more sustainable future for all Africans.",
   },
 ];
 
@@ -62,24 +57,56 @@ export const feedback = [
     content:
       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
     name: "Esther Eruchie",
-    title: "Product Manager",
+    title: "Founder",
     img: people01,
   },
   {
     id: "feedback-2",
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
-    name: "Osato Ben",
-    title: "Product Manager",
+    name: "Osatohanmwen Ben-Iyare",
+    title: "Technical Project Manager",
     img: people02,
   },
   {
     id: "feedback-3",
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Rachael Oniga",
-    title: "Product Manager",
+    name: "Kenny Ogbogu",
+    title: "Lead Developer",
     img: people03,
+  },
+  {
+    id: "feedback-4",
+    content:
+      "It is usually people in the money business, finance, and international trade that are really rich.",
+    name: "Brian Phiri",
+    title: "Data Analyst",
+    img: people04,
+  },
+  {
+    id: "feedback-5",
+    content:
+      "It is usually people in the money business, finance, and international trade that are really rich.",
+    name: "Daniel Paul",
+    title: "Product Manager",
+    img: people05,
+  },
+  {
+    id: "feedback-6",
+    content:
+      "It is usually people in the money business, finance, and international trade that are really rich.",
+    name: "Judith Ejike",
+    title: "Content Creator",
+    img: people06,
+  },
+  {
+    id: "feedback-7",
+    content:
+      "It is usually people in the money business, finance, and international trade that are really rich.",
+    name: "Abdulmatin Gbolahan Lawal",
+    title: "UI/UX Designer",
+    img: people07,
   },
 ];
 

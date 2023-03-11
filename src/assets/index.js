@@ -23,6 +23,10 @@ import twitter from "./twitter.svg";
 import people01 from "./team1.jpg";
 import people02 from "./team2.jpg";
 import people03 from "./team3.jpg";
+import people04 from "./team2.jpg";
+import people05 from "./team3.jpg";
+import people06 from "./team1.jpg";
+import people07 from "./team2.jpg";
 import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
 import MaticVid2 from "./AVTesting.mp4";
@@ -55,6 +59,10 @@ export {
   people01,
   people02,
   people03,
+  people04,
+  people05,
+  people06,
+  people07,
   MaticVid1,
   MaticVid2,
   MaticProto,
