@@ -21,57 +21,54 @@ const TeamPlayers = () => (
       </div>
     </div>
 
-    <div className="w-full feedback-card2">
-      <Carousel 
-        arrows
-        autoPlaySpeed={3000}
-        containerClass="container-with-dots w-full"
-        dotListClass=""
-        draggable
-        focusOnSelect={false}
-        infinite={true}
-        itemClass="carousel-item"
-        keyBoardControl
-        minimumTouchDrag={80}
-        customTransition="all .5"
-        transitionDuration={500}
-        responsive={{
-          desktop: {
-            breakpoint: {
-              max: 3000,
-              min: 1024
-            },
-            items: 3,
+    <Carousel 
+      arrows
+      autoPlaySpeed={3000}
+      containerClass="container-with-dots w-full"
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite={true}
+      itemClass="carousel-item"
+      keyBoardControl
+      minimumTouchDrag={80}
+      autoPlay={true}
+      responsive={{
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024
           },
-          mobile: {
-            breakpoint: {
-              max: 464,
-              min: 0
-            },
-            items: 1,
+          items: 3,
+        },
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0
           },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464
-            },
-            items: 2,
-          }
-        }}
-        rewind={false}
-        rewindWithAnimation={false}
-        rtl={false}
-        shouldResetAutoplay
-        showDots={false}
-        sliderClass=""
-        slidesToSlide={1}
-        swipeable
-        className="flex flex-row flex-wrap justify-center w-full feedback-container relative z-[1]">
-          
-            {feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
-          
-      </Carousel>
-    </div>
+          items: 1,
+        },
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464
+          },
+          items: 2,
+        }
+      }}
+      rewind={false}
+      rewindWithAnimation={false}
+      rtl={false}
+      shouldResetAutoplay
+      showDots={false}
+      sliderClass=""
+      slidesToSlide={1}
+      swipeable
+      className="flex flex-row flex-wrap justify-center w-full feedback-container relative z-[1]">
+        
+          {feedback.map((card) => <FeedbackCard key={card.id} {...card} />)}
+        
+    </Carousel>
     
   </section>
 );
