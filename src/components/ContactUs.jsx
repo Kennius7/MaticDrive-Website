@@ -25,7 +25,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
+    let response = await fetch("http://localhost:5000/Admin@maticdrive.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -49,26 +49,26 @@ const ContactUs = () => {
         <form className="w-[100%] h-[100%]" onSubmit={handleSubmit}>
           <div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
+              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} required />
             </div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} required/>
             </div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
+              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} required />
             </div>
             <div className="my-4 relative z-[2]">
               <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
             </div>
             <div className="my-4 flex flex-col items-center">
-              <textarea className="w-[100%] h-[100px] rounded-lg pl-4 pt-2 mb-6 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid z-[2]" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-              <div className="w-[80%] h-[50px] pt-2 bg-black rounded-lg my-4 text-center text-white font-semibold z-[2]" type="submit"><span>{buttonText}</span></div>
+              <textarea className="w-[100%] h-[100px] rounded-lg pl-4 pt-2 mb-6 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid z-[2]" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required ></textarea>
+              <button className="w-[80%] h-[50px] pt-1 bg-black rounded-lg my-4 text-center text-white font-semibold z-[2]" type="submit"><span>{buttonText}</span></button>
             </div>
             {status.message && <div>
-                                  <p className={status.success === false ? "danger" : "success"}>
-                                    {status.message}
-                                  </p>
-                                </div>}
+              <p className={status.success === false ? "danger" : "success"}>
+                {status.message}
+              </p>
+              </div>}
           </div>
         </form>
 

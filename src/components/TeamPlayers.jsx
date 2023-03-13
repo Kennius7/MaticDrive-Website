@@ -3,6 +3,13 @@ import styles from "../style";
 import FeedbackCard from "./FeedbackCard";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, ButtonPlay } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import { people01, people02, people03, people04, people05, people06, people07 } from "../assets";
+
+
+
+
 
 
 const TeamPlayers = () => (
@@ -70,6 +77,125 @@ const TeamPlayers = () => (
         
     </Carousel>
     
+    <CarouselProvider 
+      currentSlide={0}
+      className="w-full h-[500px] rounded-[10px] bg-gray-300 carousel-size"
+      hasMasterSpinner={false}
+      interval={5000}
+      isPlaying={true}
+      playDirection={"forward"}
+      infinite={true}
+      visibleSlides={3}
+      isIntrinsicHeight={false}
+      naturalSlideWidth={500}
+      naturalSlideHeight={500}
+      totalSlides={3}>
+      <Slider 
+      className="w-full h-[480px] bg-indigo-200" 
+      isPlaying={true}
+      visibleSlides={3}
+      
+      infinite={true}>
+        <Slide index={0}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people01} alt="dp1" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Esther Eruchie
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Founder
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={1}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people02} alt="dp2" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Osatohanmwen Ben-Iyare
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Technical Project Manager
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={2}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people03} alt="dp3" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Kenny Ogbogu
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Lead Developer
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={3}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people04} alt="dp4" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Brian Phiri
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Data Analyst
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={4}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people05} alt="dp5" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Daniel Paul
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Product Manager
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={5}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people06} alt="dp6" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Judith Ejike
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                Content Creator
+              </p>
+            </div>
+          </div>
+        </Slide>
+        <Slide index={6}>
+          <div className="flex justify-center items-center flex-col rounded-[15px] p-3">
+            <img src={people07} alt="dp7" className="ss:w-[400px] ss:h-[400px] w-[300px] h-[300px] rounded-[10px]" />
+            <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
+              <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                Abdulmatin Gbolahan Lawal
+              </h4>
+              <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                UI/UX Designer
+              </p>
+            </div>
+          </div>
+        </Slide>
+      </Slider>
+      <div className="flex flex-row justify-between items-center">
+        <ButtonBack className="btn-back">Back</ButtonBack>
+          <ButtonPlay>Play</ButtonPlay>
+        <ButtonNext className="btn-forward">Next</ButtonNext>
+      </div>
+      
+    </CarouselProvider>
+
   </section>
 );
 
