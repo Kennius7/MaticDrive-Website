@@ -1,74 +1,67 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles, { layout } from "../style";
-import { contactImg } from "../assets";
+import emailjs from "@emailjs/browser";
+
 
 
 const ContactUs = () => {
-  const formInitialDetails = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: ''
-  }
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
-  const [status, setStatus] = useState({});
 
-  const onFormUpdate = (category, value) => {
-      setFormDetails({
-        ...formDetails,
-        [category]: value
-      })
-  }
+const form =useRef();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/Admin@maticdrive.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
+const [buttonText, setButtonText] = useState("Send Message");
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
+    .then((result) => {
+        console.log(result.text, result.status);
+        setButtonText("Message Sent");
+        setTimeout(() => {
+          e.target.reset();
+          setButtonText("Send Message")
+        }, 10000);
+    }, (error) => {
+        console.log(error.text, error.status);
+        setButtonText("Message Not Sent");
+        setTimeout(() => {
+          setButtonText("Please Try Again")
+        }, 8000);
+        setTimeout(() => {
+          setButtonText("Send Message")
+        }, 14000);
     });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ success: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ success: false, message: 'Something went wrong, please try again later.'});
-    }
   };
+
+
 
   return (
     <section className={`my-20 ${layout.section}`} id="connect">
       <div className="items-center w-full relative z-[2]">
         <div className={`text-center ${styles.heading2}`}>Get In Touch</div>
-        <form className="w-[100%] h-[100%]" onSubmit={handleSubmit}>
+        <form ref={form} className="w-[100%] h-[100%]" onSubmit={handleSubmit}>
           <div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} required />
+              <input name="firstName" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="First Name" required />
             </div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} required/>
+              <input name="lastName" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="Last Name" required/>
             </div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} required />
+              <input name="email" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="email" placeholder="Email Address" required />
             </div>
             <div className="my-4 relative z-[2]">
-              <input className="w-[100%] h-[50px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)}/>
+              <input name="phoneNumber" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="tel" placeholder="Phone No." />
             </div>
-            <div className="my-4 flex flex-col items-center">
-              <textarea className="w-[100%] h-[100px] rounded-lg pl-4 pt-2 mb-6 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid z-[2]" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required ></textarea>
-              <button className="w-[80%] h-[50px] pt-1 bg-black rounded-lg my-4 text-center text-white font-semibold z-[2]" type="submit"><span>{buttonText}</span></button>
+            <div className="my-4 relative z-[2]">
+              <input name="subject" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="Message Subject" />
             </div>
-            {status.message && <div>
-              <p className={status.success === false ? "danger" : "success"}>
-                {status.message}
-              </p>
-              </div>}
+            <div className="my-4 flex flex-col justify-center items-center">
+              <textarea name="message" className="w-[100%] h-[100px] rounded-lg pl-4 pt-2 mb-6 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid z-[2]" placeholder="Message" required ></textarea>
+              <button className="w-[80%] h-[50px] bg-black rounded-lg my-4 text-center justify-center items-center text-white font-semibold z-[2]" type="submit"><span>{buttonText}</span></button>
+            </div>
+          
           </div>
         </form>
 
