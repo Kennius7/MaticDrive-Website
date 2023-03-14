@@ -53,7 +53,7 @@ export const features = [
 
 export const feedback = [
   {
-    id: "feedback-1",
+    id: 0,
     content:
       "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
     name: "Esther Eruchie",
@@ -61,7 +61,7 @@ export const feedback = [
     img: people01,
   },
   {
-    id: "feedback-2",
+    id: 1,
     content:
       "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: "Osatohanmwen Ben-Iyare",
@@ -69,7 +69,7 @@ export const feedback = [
     img: people02,
   },
   {
-    id: "feedback-3",
+    id: 2,
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Kenny Ogbogu",
@@ -77,7 +77,7 @@ export const feedback = [
     img: people03,
   },
   {
-    id: "feedback-4",
+    id: 3,
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Brian Phiri",
@@ -85,7 +85,7 @@ export const feedback = [
     img: people04,
   },
   {
-    id: "feedback-5",
+    id: 4,
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Daniel Paul",
@@ -93,7 +93,7 @@ export const feedback = [
     img: people05,
   },
   {
-    id: "feedback-6",
+    id: 5,
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Judith Ejike",
@@ -101,7 +101,7 @@ export const feedback = [
     img: people06,
   },
   {
-    id: "feedback-7",
+    id: 6,
     content:
       "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Abdulmatin Gbolahan Lawal",
