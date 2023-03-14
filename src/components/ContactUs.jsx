@@ -40,7 +40,11 @@ const handleSubmit = (e) => {
   return (
     <section className={`my-20 ${layout.section}`} id="connect">
       <div className="items-center w-full">
+      <div className="flex flex-col justify-center items-center my-6 pb-16">
         <div className={`text-center ${styles.heading2}`}>Get In Touch</div>
+        <div className="text-white tracking-">----------------------</div>
+      </div>
+      
         <form ref={form} className="form__content w-[100%] h-[100%]" onSubmit={handleSubmit}>
           
             <div className="form__box">
@@ -75,10 +79,10 @@ const handleSubmit = (e) => {
         </form>
 
         {/* gradient start */}
-        <div className="absolute z-[1] w-[20%] h-[20%] right-[50%] bottom-40 blue__gradient" />
-        <div className="absolute z-[1] w-[20%] h-[20%] right-[40%] bottom-40 blue__gradient" />
-        <div className="absolute z-[1] w-[20%] h-[20%] right-[50%] bottom-40 blue__gradient" />
-        <div className="absolute z-[1] w-[20%] h-[20%] right-[40%] bottom-40 blue__gradient" />
+        <div className="absolute z-[0] opacity-10 w-[20%] h-[20%] right-[50%] bottom-40 blue__gradient" />
+        <div className="absolute z-[0] opacity-10 w-[20%] h-[20%] right-[40%] bottom-40 blue__gradient" />
+        <div className="absolute z-[0] opacity-10 w-[20%] h-[20%] right-[50%] bottom-40 blue__gradient" />
+        <div className="absolute z-[0] opacity-10 w-[20%] h-[20%] right-[40%] bottom-40 blue__gradient" />
         {/* gradient end */}
       </div>
     </section>

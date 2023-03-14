@@ -21,7 +21,7 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const AboutUs = () =>  (
-  <section id="features" className={`my-20 ${layout.section}`}>
+  <section id="aboutUs" className={`my-20 ${layout.section}`}>
     <div className={layout.sectionInfo}>
       <div className={`${styles.heading2} text-[30]`}>
         About MATIC<span className="text-gradient" >DRIVE</span> 

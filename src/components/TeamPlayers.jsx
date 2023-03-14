@@ -34,10 +34,10 @@ const TeamPlayers = () => {
             <div className="w-full flex flex-col justify-center items-center">
               <img src={card.img} alt={card.name} className="bg-center bg-cover rounded-[10px]" />
               <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
-                <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
+                <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-white">
                   {card.name}
                 </h4>
-                <p className="font-poppins font-normal text-[16px] leading-[24px] text-primary">
+                <p className="font-poppins font-normal text-[16px] leading-[24px] text-white">
                   {card.title}
                 </p>
               </div>

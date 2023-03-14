@@ -9,8 +9,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar md:bg-transparent bg-gray-300`}>
-      <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[70px] ss:h-[70px]" />
+    <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar bg-transparent`}>
+      <img src={logo} alt="Maticdrive logo" className="w-[65px] h-[65px] ss:w-[70px] ss:h-[70px] m-2" />
 
       <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
