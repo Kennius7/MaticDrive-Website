@@ -10,14 +10,14 @@ const Navbar = () => {
 
   return (
     <nav className={`ss:w-full w-[100%] flex justify-between items-center navbar md:bg-transparent bg-gray-300`}>
-      <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[180px] ss:h-[120px]" />
+      <img src={logo} alt="Maticdrive logo" className="w-[140px] h-[80px] ss:w-[70px] ss:h-[70px]" />
 
       <ul className="list-none md:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[18px] ${
-              active === nav.title ? "text-primary" : "text-gray-400"
+              active === nav.title ? "text-white" : "text-gray-400"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >

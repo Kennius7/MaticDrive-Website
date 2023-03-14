@@ -21,16 +21,17 @@ const handleSubmit = (e) => {
         setTimeout(() => {
           e.target.reset();
           setButtonText("Send Message")
-        }, 10000);
+        }, 6000);
     }, (error) => {
         console.log(error.text, error.status);
         setButtonText("Message Not Sent");
         setTimeout(() => {
+          e.target.reset();
           setButtonText("Please Try Again")
-        }, 8000);
+        }, 6000);
         setTimeout(() => {
           setButtonText("Send Message")
-        }, 14000);
+        }, 12000);
     });
   };
 
@@ -38,31 +39,39 @@ const handleSubmit = (e) => {
 
   return (
     <section className={`my-20 ${layout.section}`} id="connect">
-      <div className="items-center w-full relative z-[2]">
+      <div className="items-center w-full">
         <div className={`text-center ${styles.heading2}`}>Get In Touch</div>
-        <form ref={form} className="w-[100%] h-[100%]" onSubmit={handleSubmit}>
-          <div>
-            <div className="my-4 relative z-[2]">
-              <input name="firstName" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="First Name" required />
+        <form ref={form} className="form__content w-[100%] h-[100%]" onSubmit={handleSubmit}>
+          
+            <div className="form__box">
+              <input name="firstName" className="form__input " type="text" placeholder="First Name" required />
+              <div className="form__shadow"></div>
             </div>
-            <div className="my-4 relative z-[2]">
-              <input name="lastName" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="Last Name" required/>
+            <div className="form__box">
+              <input name="lastName" className="form__input " type="text" placeholder="Last Name" required/>
+              <div className="form__shadow"></div>
             </div>
-            <div className="my-4 relative z-[2]">
-              <input name="email" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="email" placeholder="Email Address" required />
+            <div className="form__box">
+              <input name="email" className="form__input " type="email" placeholder="Email Address" required />
+              <div className="form__shadow"></div>
             </div>
-            <div className="my-4 relative z-[2]">
-              <input name="phoneNumber" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="tel" placeholder="Phone No." />
+            <div className="form__box">
+              <input name="phoneNumber" className="form__input " type="tel" placeholder="Phone No." />
+              <div className="form__shadow"></div>
             </div>
-            <div className="my-4 relative z-[2]">
-              <input name="subject" className="w-[100%] h-[40px] rounded-lg pl-4 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid" type="text" placeholder="Message Subject" />
+            <div className="form__box">
+              <input name="subject" className="form__input " type="text" placeholder="Subject" />
+              <div className="form__shadow"></div>
             </div>
-            <div className="my-4 flex flex-col justify-center items-center">
-              <textarea name="message" className="w-[100%] h-[100px] rounded-lg pl-4 pt-2 mb-6 bg-dimWhite placeholder-gray-500 border-2 border-blue-500 border-solid z-[2]" placeholder="Message" required ></textarea>
-              <button className="w-[80%] h-[50px] bg-black rounded-lg my-4 text-center justify-center items-center text-white font-semibold z-[2]" type="submit"><span>{buttonText}</span></button>
+            <div className="form__box h-[100px]">
+              <textarea name="message" className="form__messageInput" placeholder="Message" required ></textarea>
+              <div className="form__messageShadow"></div>
+            </div>
+            <div className="form__button">
+              <button className="form__submit" type="submit">{buttonText}</button>
+              <div className="form__shadow"></div>
             </div>
           
-          </div>
         </form>
 
         {/* gradient start */}

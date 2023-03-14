@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 
 const App = () => (
-  <div className="bg-indigo-500 w-full overflow-hidden absolute z-10">
+  <div className="bg-primary w-full overflow-hidden absolute z-10">
     <div className={`${styles.navPaddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         <Navbar />

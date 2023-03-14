@@ -28,11 +28,11 @@ const TeamPlayers = () => {
         </div>
       </div>
 
-      <div className="max-w-lg">
-        <CarouselSlider>
+      <div className="max-w-lg w-full h-[700px] m-auto py-16 px-4">
+        <CarouselSlider autoSlide={true}>
           {feedback.map((card) => (
-            <div className="w-full flex flex-col items-center">
-              <img src={card.img} alt={card.name} className="sm:w-[500px] sm:h-[500px] w-[350px] h-[350px] rounded-[10px]" />
+            <div className="w-full flex flex-col justify-center items-center">
+              <img src={card.img} alt={card.name} className="bg-center bg-cover rounded-[10px]" />
               <div className="flex flex-col ss:w-[400px] w-[300px] items-center rounded-[10px] mt-2">
                 <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-primary">
                   {card.name}

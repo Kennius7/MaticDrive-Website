@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { ChevronLeft, ChevronRight } from "react-feather";
 
 
 
 
-const CarouselSlider = ({ children: feedback }) => {
+const CarouselSlider = ({ children: feedback, autoSlide=false, autoSlideInterval=3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
 
@@ -13,13 +13,19 @@ const prev = () => setCurrentIndex((currentIndex) => (currentIndex === 0 ? feedb
 
 const next = () => setCurrentIndex((currentIndex) => (currentIndex === feedback.length - 1 ? 0 : currentIndex + 1));
 
+useEffect(() => {
+  if (!autoSlide) return
+  const slideInterval = setInterval(next, autoSlideInterval);
+  return () => clearInterval(slideInterval);
+
+  }, [])
 
 
 
   return (
-    <div className='w-[100%] h-[100%] flex justify-center items-center relative cursor-pointer'>
-      <div key={feedback.id} className=''>
-        <div className="flex justify-center items-center rounded-[10px] p-3 transition-transform ease-out duration-500" style={{ transform: `translateX(-${currentIndex * 100})` }}>
+    <div className='flex justify-center items-center relative cursor-pointer'>
+      <div key={feedback[currentIndex].id} className=''>
+        <div className="flex justify-center items-center transition-transform ease-out" style={{ transform: `translateX(-${currentIndex * 100})` }}>
           { feedback[currentIndex] }
         </div>
       </div>
