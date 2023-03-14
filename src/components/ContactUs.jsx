@@ -38,11 +38,11 @@ const handleSubmit = (e) => {
 
 
   return (
-    <section className={`my-20 ${layout.section}`} id="connect">
+    <section id="contact" className={`my-20 ${layout.section}`}>
       <div className="items-center w-full">
       <div className="flex flex-col justify-center items-center my-6 pb-16">
         <div className={`text-center ${styles.heading2}`}>Get In Touch</div>
-        <div className="text-white tracking-">----------------------</div>
+        <div className="text-white tracking-tighter">---------------------------------------------------</div>
       </div>
       
         <form ref={form} className="form__content w-[100%] h-[100%]" onSubmit={handleSubmit}>
