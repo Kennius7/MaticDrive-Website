@@ -118,7 +118,7 @@ export const featureSlide = [
   {
     id: 0,
     name: "Matic Drive Features",
-    title: "Sensor features and technologies",
+    title: "Sensors and technologies",
     img: features01,
   },
   {
@@ -136,25 +136,25 @@ export const featureSlide = [
   {
     id: 3,
     name: "SONAR",
-    title: "Sound navigation and ranging sensors",
+    title: "Sound sensors systems",
     img: features04,
   },
   {
     id: 4,
     name: "CAMERAS",
-    title: "Camera based data reception systems",
+    title: "Data reception systems",
     img: features05,
   },
   {
     id: 5,
     name: "GPS",
-    title: "GPS based navigation systems",
+    title: "Navigation systems",
     img: features06,
   },
   {
     id: 6,
     name: "Support Systems",
-    title: "Physically challenged features",
+    title: "For the Physically challenged",
     img: features07,
   },
 ];
