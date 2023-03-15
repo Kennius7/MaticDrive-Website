@@ -114,6 +114,51 @@ export const feedback = [
   },
 ];
 
+export const featureSlide = [
+  {
+    id: 0,
+    name: "Esther Eruchie",
+    title: "Founder",
+    img: people01,
+  },
+  {
+    id: 1,
+    name: "Osatohanmwen Ben-Iyare",
+    title: "Technical Project Manager",
+    img: people02,
+  },
+  {
+    id: 2,
+    name: "Kenny Ogbogu",
+    title: "Lead Developer",
+    img: people03,
+  },
+  {
+    id: 3,
+    name: "Brian Phiri",
+    title: "Data Analyst",
+    img: people04,
+  },
+  {
+    id: 4,
+    name: "Daniel Paul",
+    title: "Product Manager",
+    img: people05,
+  },
+  {
+    id: 5,
+    name: "Judith Ejike",
+    title: "Content Creator",
+    img: people06,
+  },
+  {
+    id: 6,
+    name: "Abdulmatin Gbolahan Lawal",
+    title: "UI/UX Designer",
+    img: people07,
+  },
+];
+
 export const stats = [
   {
     id: "stats-1",

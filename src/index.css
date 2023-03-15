@@ -263,7 +263,6 @@
   cursor: pointer;
   transition: transform .3s;
   z-index: 10;
-  transform: translate(1px, 1px);
 }
 
 

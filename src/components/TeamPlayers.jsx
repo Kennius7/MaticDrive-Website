@@ -21,9 +21,8 @@ const TeamPlayers = () => {
           Meet the <br className="sm:block hidden" /> MATIC<span className="text-gradient">DRIVE</span> Team.
         </h2>
         <div className="w-full md:mt-0 mt-6">
-          <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-            Everything you need to accept card payments and grow your business
-            anywhere on the planet.
+          <p className={`${styles.paragraph} text-left max-w-[500px]`}>
+            An agile team experienced with machine learning and neural data AI systems production, development, deployment etc.
           </p>
         </div>
       </div>
