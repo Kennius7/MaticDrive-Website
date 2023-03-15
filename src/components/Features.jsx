@@ -1,14 +1,14 @@
 import { featureSlide } from "../constants";
 import styles, { layout } from "../style";
-import CarouselSlider from "./CarouselSlider";
+import FeatureCarouselSlider from "./FeatureCarouselSlider";
 
 
 
 const Features = () => (
-  <section id="product" className={`my-20 ${layout.sectionReverse}`}>
+  <section id="features" className={`my-20 ${layout.sectionReverse}`}>
     <div className={layout.sectionImgReverse}>
       <div className="max-w-lg w-full h-[700px] m-auto py-16 px-4">
-        <CarouselSlider autoSlide={true}>
+        <FeatureCarouselSlider autoSlide={true}>
           {featureSlide.map((card) => (
             <div className="w-full flex flex-col justify-center items-center">
               <img src={card.img} alt={card.name} className="bg-center bg-cover rounded-[10px]" />
@@ -22,7 +22,7 @@ const Features = () => (
               </div>
             </div>
           ))}
-        </CarouselSlider>
+        </FeatureCarouselSlider>
       </div>
 
       {/* gradient start */}
@@ -31,8 +31,8 @@ const Features = () => (
       {/* gradient end */}
     </div>
 
-    <div className={layout.sectionInfo}>
-      <h2 className={styles.headingFeatures}>
+    <div className={`${layout.sectionInfo} -mt-4`}>
+      <h2 className={`${styles.headingFeatures}`}>
         MATIC<span className="text-gradient">DRIVE</span> AVs <br /> Features & Technologies
       </h2>
       <p className={ `${styles.paragraphFeatures} max-w-[600px] mt-5` }>

@@ -1,4 +1,4 @@
-import { people01, people02, people03, people04, people05, people06, people07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people05, people06, people07, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -117,45 +117,45 @@ export const feedback = [
 export const featureSlide = [
   {
     id: 0,
-    name: "Esther Eruchie",
-    title: "Founder",
-    img: people01,
+    name: "Matic Drive Features",
+    title: "Sensor features and technologies",
+    img: features01,
   },
   {
     id: 1,
-    name: "Osatohanmwen Ben-Iyare",
-    title: "Technical Project Manager",
-    img: people02,
+    name: "LIDAR",
+    title: "Light detection and ranging sensors",
+    img: features02,
   },
   {
     id: 2,
-    name: "Kenny Ogbogu",
-    title: "Lead Developer",
-    img: people03,
+    name: "RADAR",
+    title: "Radio detection and ranging sensors",
+    img: features03,
   },
   {
     id: 3,
-    name: "Brian Phiri",
-    title: "Data Analyst",
-    img: people04,
+    name: "SONAR",
+    title: "Sound navigation and ranging sensors",
+    img: features04,
   },
   {
     id: 4,
-    name: "Daniel Paul",
-    title: "Product Manager",
-    img: people05,
+    name: "CAMERAS",
+    title: "Camera based data reception systems",
+    img: features05,
   },
   {
     id: 5,
-    name: "Judith Ejike",
-    title: "Content Creator",
-    img: people06,
+    name: "GPS",
+    title: "GPS based navigation systems",
+    img: features06,
   },
   {
     id: 6,
-    name: "Abdulmatin Gbolahan Lawal",
-    title: "UI/UX Designer",
-    img: people07,
+    name: "Support Systems",
+    title: "Physically challenged features",
+    img: features07,
   },
 ];
 

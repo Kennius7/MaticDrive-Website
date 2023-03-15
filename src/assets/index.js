@@ -31,6 +31,13 @@ import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
 import MaticVid2 from "./AVTesting.mp4";
 import contactImg from "./contactImg.svg";
+import features01 from "./FeaturesPics1.jpg";
+import features02 from "./FeaturesPics2.jpg";
+import features03 from "./FeaturesPics3.jpg";
+import features04 from "./FeaturesPics4.jpg";
+import features05 from "./FeaturesPics5.jpg";
+import features06 from "./FeaturesPics6.jpg";
+import features07 from "./FeaturesPics7.jpg";
 
 
 export {
@@ -63,6 +70,13 @@ export {
   people05,
   people06,
   people07,
+  features01,
+  features02,
+  features03,
+  features04,
+  features05,
+  features06,
+  features07,
   MaticVid1,
   MaticVid2,
   MaticProto,
