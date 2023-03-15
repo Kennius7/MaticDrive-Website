@@ -1,6 +1,6 @@
 import styles from "./style";
 import { AboutUs, Partnership, Footer, Navbar, TeamPlayers, Hero, Banner, ContactUs, Features } from "./components";
-import 'react-multi-carousel/lib/styles.css';
+
 
 
 const App = () => (

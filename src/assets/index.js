@@ -36,15 +36,8 @@ import features07 from "./FeaturesPics7.jpg";
 
 
 export {
-  airbnb,
-  bill,
-  binance,
-  card,
-  coinbase,
-  dropbox,
   logo,
   quotes,
-  robot,
   send,
   shield,
   star,
