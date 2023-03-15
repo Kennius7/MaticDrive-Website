@@ -173,11 +173,17 @@
   color: #ffffffb3;
   color: #09977c1a;
 }
+
+
+
+
 /* //////////////////////////////////====CONTACT FORM CSS====///////////////////////////////////// */
+
+
 
 .form__content{
   display: grid;
-  row-gap: 1.2rem;
+  row-gap: 1.0rem;
 }
 
 .form__input,

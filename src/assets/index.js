@@ -13,6 +13,7 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
+import youtube from "./facebook.svg";
 import people01 from "./MaticEsther2.png";
 import people02 from "./MaticOsato.png";
 import people03 from "./MaticKenny.png";
@@ -51,6 +52,7 @@ export {
   instagram,
   linkedin,
   twitter,
+  youtube,
   people01,
   people02,
   people03,

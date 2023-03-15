@@ -1,4 +1,4 @@
-import { people01, people02, people03, people04, people05, people06, people07, people08, people09, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people05, people06, people07, people08, people09, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, youtube, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -245,7 +245,7 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "https://www.instagram.com/maticdrive?igshid=YmMyMTA2M2Y=",
   },
   {
     id: "social-media-2",
@@ -260,8 +260,13 @@ export const socialMedia = [
   {
     id: "social-media-4",
     icon: linkedin,
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/company/maticdrive/",
   },
+  {
+    id: "social-media-5",
+    icon: youtube,
+    link: "https://youtu.be/8EFgwcbjtyl",
+  }
 ];
 
 
