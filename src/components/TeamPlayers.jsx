@@ -1,7 +1,5 @@
 import { feedback } from "../constants";
 import styles from "../style";
-import 'react-multi-carousel/lib/styles.css';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import CarouselSlider from "./CarouselSlider";
 
 

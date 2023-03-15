@@ -1,12 +1,5 @@
-import airbnb from "./airbnb.png";
-import bill from "./bill.png";
-import binance from "./binance.png";
-import card from "./card.png";
-import coinbase from "./coinbase.png";
-import dropbox from "./dropbox.png";
 import logo from "./MaticIconSmall1.png";
 import quotes from "./quotes.svg";
-import robot from "./AVPicture.png";
 import send from "./MaticIconSmall1.png";
 import shield from "./MaticIconSmall1.png";
 import star from "./MaticIconSmall1.png";
@@ -20,13 +13,15 @@ import facebook from "./facebook.svg";
 import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
-import people01 from "./MaticEsther.png";
+import people01 from "./MaticEsther2.png";
 import people02 from "./MaticOsato.png";
 import people03 from "./MaticKenny.png";
 import people04 from "./MaticBrian.png";
-import people05 from "./Daniel.png";
+import people05 from "./MaticDaniel1.png";
 import people06 from "./MaticJudith.png";
-import people07 from "./MaticAbdulmatin.png";
+import people07 from "./MaticAbdulmatin2.png";
+import people08 from "./MaticAdenike.png";
+import people09 from "./MaticAzeez.png";
 import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
 import MaticVid2 from "./AVTesting.mp4";
@@ -70,6 +65,8 @@ export {
   people05,
   people06,
   people07,
+  people08,
+  people09,
   features01,
   features02,
   features03,

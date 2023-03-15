@@ -1,4 +1,4 @@
-import { people01, people02, people03, people04, people05, people06, people07, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people05, people06, people07, people08, people09, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -58,59 +58,57 @@ export const features = [
 export const feedback = [
   {
     id: 0,
-    content:
-      "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
     name: "Esther Eruchie",
     title: "Founder",
     img: people01,
   },
   {
     id: 1,
-    content:
-      "Money makes your life easier. If you're lucky to have it, you're lucky.",
     name: "Osatohanmwen Ben-Iyare",
     title: "Technical Project Manager",
     img: people02,
   },
   {
     id: 2,
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Kenny Ogbogu",
     title: "Lead Developer",
     img: people03,
   },
   {
     id: 3,
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Brian Phiri",
     title: "Data Analyst",
     img: people04,
   },
   {
     id: 4,
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Daniel Paul",
     title: "Product Manager",
     img: people05,
   },
   {
     id: 5,
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
-    name: "Judith Ejike",
+    name: "Judith Korodele",
     title: "Content Creator",
     img: people06,
   },
   {
     id: 6,
-    content:
-      "It is usually people in the money business, finance, and international trade that are really rich.",
     name: "Abdulmatin Gbolahan Lawal",
-    title: "UI/UX Designer",
+    title: "Lead UI/UX Designer",
     img: people07,
+  },
+  {
+    id: 7,
+    name: "Adenike",
+    title: "UI/UX Designer",
+    img: people08,
+  },
+  {
+    id: 8,
+    name: "Azeez",
+    title: "Lead Analyst",
+    img: people09,
   },
 ];
 

@@ -1,5 +1,6 @@
 import styles from "../style";
-import { discount, MaticVid2 } from "../assets";
+import { MaticVid2 } from "../assets";
+import YoutubeEmbed from "./YoutubeEmbed";
 
 
 const Hero = () => {
@@ -24,6 +25,7 @@ const Hero = () => {
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
         <video src={MaticVid2} className="w-full rounded-lg w-[800px] h-[700px] px-2 xs:-my-0 -my-60" autoPlay muted loop />
+        <YoutubeEmbed embedId="8EFgwcbjtyI" />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

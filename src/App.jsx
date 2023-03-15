@@ -1,5 +1,5 @@
 import styles from "./style";
-import { AboutUs, CardDeal, Clients, Partnership, Footer, Navbar, Stats, TeamPlayers, Hero, Banner, ContactUs, Features } from "./components";
+import { AboutUs, Partnership, Footer, Navbar, TeamPlayers, Hero, Banner, ContactUs, Features } from "./components";
 import 'react-multi-carousel/lib/styles.css';
 
 
