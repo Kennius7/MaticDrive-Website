@@ -1,6 +1,6 @@
-import styles, { layout } from "../style";
-import { logo } from "../assets";
+import { layout } from "../style";
 import { socialMedia } from "../constants";
+
 
 
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 
 const YoutubeEmbed = ({ embedId }) => (
-  <div className="video-responsive">
+  <div className="video-responsive ss:mx-2 mx-0 rounded-lg">
     <iframe
       width="853"
       height="480"
