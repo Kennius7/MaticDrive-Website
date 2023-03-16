@@ -9,6 +9,7 @@ const ContactUs = () => {
 const form =useRef();
 
 const [buttonText, setButtonText] = useState("Send Message");
+const [style, setStyle] = useState("default");
 
 
 const handleSubmit = (e) => {
@@ -17,19 +18,23 @@ const handleSubmit = (e) => {
   emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
     .then((result) => {
         console.log(result.text, result.status);
+        setStyle("sent");
         setButtonText("Message Sent");
         setTimeout(() => {
           e.target.reset();
+          setStyle("default")
           setButtonText("Send Message")
         }, 6000);
     }, (error) => {
         console.log(error.text, error.status);
+        setStyle("reject")
         setButtonText("Message Not Sent");
         setTimeout(() => {
           e.target.reset();
           setButtonText("Please Try Again")
         }, 6000);
         setTimeout(() => {
+          setStyle("default")
           setButtonText("Send Message")
         }, 12000);
     });
@@ -72,7 +77,11 @@ const handleSubmit = (e) => {
               <div className="form__messageShadow"></div>
             </div>
             <div className="form__button">
-              <button className="form__submit" type="submit">{buttonText}</button>
+              <button 
+                className={`form__submit ${style==="sent" ? "sent" : "default"} ${style==="reject" ? "reject" : "default"}}`} 
+                type="submit">
+                {buttonText}
+              </button>
               <div className="form__shadow"></div>
             </div>
           

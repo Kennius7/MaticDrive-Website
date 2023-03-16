@@ -272,7 +272,7 @@
 }
 
 
-.form__submit:hover{
+.form__submit:focus{
   position: absolute;
   transform: translate(-6px, -6px);
   z-index: 20;
@@ -288,6 +288,14 @@
 .form__messageInput:focus,
 .form__messageInput:not(:placeholder-shown).form__messageInput:not(:focus){
   transform: translate(-4px, -4px);
+}
+
+.sent{
+  background-color: #0cb335;
+}
+
+.reject{
+  background-color: #b33b0c;
 }
 
 
