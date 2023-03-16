@@ -298,6 +298,14 @@
   background-color: #b33b0c;
 }
 
+.default{
+  background-color: #07064e;
+}
+
+.error-default{
+  background-color: #07064e;
+}
+
 
 /* ///////////////////===== YOUTUBE EMBED CSS =====//////////////////////////// */
 

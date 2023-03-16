@@ -10,33 +10,42 @@ const form =useRef();
 
 const [buttonText, setButtonText] = useState("Send Message");
 const [style, setStyle] = useState("default");
+const [errorStyle, setErrorStyle] = useState("error-default");
+const sentStyle = "sent";
+const rejectStyle = "reject";
+
 
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  setButtonText("Sending...")
 
   emailjs.sendForm('service_eeeosp7', 'template_ltnvx66', form.current, 'h-F7iEPReaPmY032e')
     .then((result) => {
         console.log(result.text, result.status);
-        setStyle("sent");
-        setButtonText("Message Sent");
         setTimeout(() => {
-          e.target.reset();
+          setStyle("sent")
+          setButtonText("Message Sent")
+        }, 3000);
+        setTimeout(() => {
+          // e.target.reset();
           setStyle("default")
           setButtonText("Send Message")
-        }, 6000);
+        }, 7000);
     }, (error) => {
         console.log(error.text, error.status);
-        setStyle("reject")
-        setButtonText("Message Not Sent");
         setTimeout(() => {
-          e.target.reset();
+          setErrorStyle("reject")
+          setButtonText("Message Not Sent");
+        }, 3000);
+        setTimeout(() => {
+          // e.target.reset();
           setButtonText("Please Try Again")
-        }, 6000);
+        }, 7000);
         setTimeout(() => {
-          setStyle("default")
+          setErrorStyle("error-default")
           setButtonText("Send Message")
-        }, 12000);
+        }, 10000);
     });
   };
 
@@ -69,7 +78,7 @@ const handleSubmit = (e) => {
               <div className="form__shadow"></div>
             </div>
             <div className="form__box">
-              <input name="subject" className="form__input " type="text" placeholder="Subject" />
+              <input name="subject" className="form__input" type="text" placeholder="Subject" />
               <div className="form__shadow"></div>
             </div>
             <div className="form__box h-[100px]">
@@ -78,7 +87,7 @@ const handleSubmit = (e) => {
             </div>
             <div className="form__button">
               <button 
-                className={`form__submit ${style==="sent" ? "sent" : "default"} ${style==="reject" ? "reject" : "default"}}`} 
+                className={`form__submit ${style === sentStyle ? "sent" : ""} ${errorStyle === rejectStyle ? "reject" : ""}`} 
                 type="submit">
                 {buttonText}
               </button>
