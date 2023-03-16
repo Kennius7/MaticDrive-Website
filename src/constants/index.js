@@ -1,4 +1,4 @@
-import { people01, people02, people03, people04, people05, people06, people07, people08, people09, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, youtube, send, shield, star  } from "../assets";
+import { people01, people02, people03, people04, people05, people06, people07, people08, people09, people10, features01, features02, features03, features04, features05, features06, features07, facebook, instagram, linkedin, twitter, youtube, send, shield, star  } from "../assets";
 
 export const navLinks = [
   {
@@ -51,7 +51,7 @@ export const features = [
   },
 ];
 
-export const feedback = [
+export const teamMembers = [
   {
     id: 0,
     name: "Esther Eruchie",
@@ -72,40 +72,47 @@ export const feedback = [
   },
   {
     id: 3,
+    name: "Daniel Paul",
+    title: "Co-Founder",
+    img: people05,
+  },
+  {
+    id: 4,
+    name: "Rachael Oshuwa Ugbomeh",
+    title: "Product Manager",
+    img: people10,
+  },
+  {
+    id: 5,
+    name: "Azeez Odekunle",
+    title: "Lead Data Analyst",
+    img: people09,
+  },
+  {
+    id: 6,
     name: "Brian Phiri",
     title: "Data Analyst",
     img: people04,
   },
   {
-    id: 4,
-    name: "Daniel Paul",
-    title: "Product Manager",
-    img: people05,
-  },
-  {
-    id: 5,
+    id: 7,
     name: "Judith Korodele",
     title: "Content Creator",
     img: people06,
   },
   {
-    id: 6,
+    id: 8,
     name: "Abdulmatin Gbolahan Lawal",
     title: "Lead UI/UX Designer",
     img: people07,
   },
   {
-    id: 7,
-    name: "Adenike",
+    id: 9,
+    name: "Adesanya Ruqoyah Adenike",
     title: "UI/UX Designer",
     img: people08,
   },
-  {
-    id: 8,
-    name: "Azeez",
-    title: "Lead Analyst",
-    img: people09,
-  },
+ 
 ];
 
 export const featureSlide = [
@@ -150,24 +157,6 @@ export const featureSlide = [
     name: "Support Systems",
     title: "For the Physically challenged",
     img: features07,
-  },
-];
-
-export const stats = [
-  {
-    id: "stats-1",
-    title: "Client Base",
-    value: "3.8M+",
-  },
-  {
-    id: "stats-2",
-    title: "Pending Requisitions",
-    value: "2.3M+",
-  },
-  {
-    id: "stats-3",
-    title: "Value Estimation",
-    value: "$830M+",
   },
 ];
 

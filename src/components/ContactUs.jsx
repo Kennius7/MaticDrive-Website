@@ -62,11 +62,7 @@ const handleSubmit = (e) => {
         <form ref={form} className="form__content w-[100%] h-[100%]" onSubmit={handleSubmit}>
           
             <div className="form__box">
-              <input name="firstName" className="form__input " type="text" placeholder="First Name" required />
-              <div className="form__shadow"></div>
-            </div>
-            <div className="form__box">
-              <input name="lastName" className="form__input " type="text" placeholder="Last Name" required/>
+              <input name="fullName" className="form__input " type="text" placeholder="Full Name" required />
               <div className="form__shadow"></div>
             </div>
             <div className="form__box">

@@ -23,6 +23,7 @@ import people06 from "./MaticJudith.png";
 import people07 from "./MaticAbdulmatin2.png";
 import people08 from "./MaticAdenike.png";
 import people09 from "./MaticAzeez.png";
+import people10 from "./MaticRachael.png";
 import MaticVid1 from "./MaticDriveVid.mp4";
 import MaticProto from "./MaticProto.jpg";
 import MaticVid2 from "./AVTesting.mp4";
@@ -62,6 +63,7 @@ export {
   people07,
   people08,
   people09,
+  people10,
   features01,
   features02,
   features03,

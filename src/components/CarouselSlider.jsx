@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 
 
 
-const CarouselSlider = ({ children: feedback, autoSlide=false, autoSlideInterval=3000 }) => {
+const CarouselSlider = ({ children: feedback, autoSlide=false, autoSlideInterval=5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
 
