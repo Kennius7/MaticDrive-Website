@@ -22,10 +22,6 @@ export const navLinks = [
     title: "Our Team",
   },
   {
-    id: "partners",
-    title: "Partner With Us",
-  },
-  {
     id: "contact",
     title: "Contact Us",
   },
@@ -255,7 +251,7 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: twitter,
-    link: "https://www.twitter.com/",
+    link: "https://twitter.com/MaticDrive1?t=TUwUJd1GQf7n3xYvoFHvPw&s=09",
   },
   {
     id: "social-media-4",
@@ -265,7 +261,7 @@ export const socialMedia = [
   {
     id: "social-media-5",
     icon: youtube,
-    link: "https://youtu.be/8EFgwcbjtyl",
+    link: "https://youtube.com/@maticdrive",
   }
 ];
 
