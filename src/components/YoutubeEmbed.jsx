@@ -4,14 +4,13 @@ import PropTypes from "prop-types";
 
 
 const YoutubeEmbed = ({ embedId }) => (
-  <div className="video-responsive ss:mx-2 mx-0 rounded-lg">
+  <div className="ss:mx-3 mx-2 border-yellow-300 ss:w-[500px] ss:h-[400px] w-[350px] h-[300px] border rounded-lg">
     <iframe
-      width="853"
-      height="480"
       src={`https://www.youtube.com/embed/${embedId}`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-      title="Embedded youtube"
+      title="Matic Drive Presentation"
+      className="rounded-lg w-full h-full"
     />
   </div>
 );
