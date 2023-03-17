@@ -2,9 +2,10 @@ const styles = {
   boxWidth: "xl:max-w-[1280px] w-full",
 
   heading2: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-  headingPart: "font-poppins font-semibold xs:text-[48px] text-[32px] text-white xs:leading-[76.8px] leading-[50px] w-full",
+  headingPart: "font-poppins font-semibold ss:text-[45px] md:text-[62px] text-[36px] lg:tracking-normal tracking-tighter text-white ss:leading-[60px] leading-[50px] w-full",
   headingFeatures: "font-poppins font-semibold xs:text-[42px] text-[27px] xs:tracking-wide tracking-tighter text-white xs:leading-[45px] leading-[50px] w-full",
   paragraph: "font-poppins font-normal text-white text-[18px] leading-[30.8px]",
+  paragraphPartner: "font-poppins font-normal text-white ss:text-[25px] text-[18px] sm:leading-[37px] leading-[30.8px]",
   paragraphFeatures: "font-poppins font-normal text-white ss:text-[18px] text-[15px] ss:leading-[35px] leading-[25px] ss:tracking-wider tracking-normal",
 
   flexCenter: "flex justify-center items-center",
@@ -14,6 +15,7 @@ const styles = {
   paddingX: "sm:px-16 px-6",
   paddingY: "sm:py-16 py-6",
   padding: "sm:px-16 px-6 sm:py-12 py-4",
+  paddingPart: "sm:px-8 px-6 sm:py-12 py-4",
 
   marginX: "sm:mx-16 mx-6",
   marginY: "sm:my-16 my-6",

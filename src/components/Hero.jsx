@@ -12,7 +12,6 @@ const Hero = () => {
             The Next Generation <br className="xs:block hidden" /> <span className="text-gradient">Driverless Cars</span>
           </h1>
         </div>
-
         <h1 className="-mt-3 font-poppins font-semibold ss:text-[55px] text-[40px] text-white ss:leading-[100.8px] leading-[75px] w-full">
           For Africa
         </h1>
