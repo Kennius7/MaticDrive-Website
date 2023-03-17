@@ -19,7 +19,7 @@ const Partnership = () => (
         </div>
       </div>
       
-      <div className="w-[280px] h-[280px] ss:w-[350px] ss:h-[350px] lg:w-[500px] lg:h-[500px] lg:ml-20">
+      <div className="w-[280px] h-[280px] ss:w-[350px] ss:h-[350px] lg:w-[500px] sm:h-[400px] sm:w-[400px] lg:h-[500px] sm:ml-4 lg:ml-20">
         <img className="rounded-lg w-[100%] h-[100%]" src={partnership} alt="partnership" />
       </div>
       
