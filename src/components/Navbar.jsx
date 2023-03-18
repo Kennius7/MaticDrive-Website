@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
+import { Link } from "react-scroll";
+
 
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+
 
 
   return (
@@ -16,12 +19,12 @@ const Navbar = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[18px] ${
+            className={`font-poppins font-normal cursor-pointer text-[18px] hover:border-b-4 hover:pb-2 hover:border-yellow-300 ${
               active === nav.title ? "text-white" : "text-gray-400"
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <Link to={`${nav.id}`} spy={true} smooth={true} offset={50} duration={1000}>{nav.title}</Link>
           </li>
         ))}
       </ul>
@@ -48,7 +51,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={`${nav.id}`} spy={true} smooth={true} offset={50} duration={1000}>{nav.title}</Link>
               </li>
             ))}
           </ul>
