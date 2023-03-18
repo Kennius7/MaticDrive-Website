@@ -28,7 +28,7 @@ const handleSubmit = (e) => {
           setButtonText("Message Sent")
         }, 3000);
         setTimeout(() => {
-          // e.target.reset();
+          e.target.reset();
           setStyle("default")
           setButtonText("Send Message")
         }, 7000);
