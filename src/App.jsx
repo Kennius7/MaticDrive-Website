@@ -25,7 +25,7 @@ const App = () => {
 
   return (
     <div className={`bg-primary w-full relative overflow-hidden`}>
-      <div className={`${scrolled ? "fixed" : ""} ${styles.navPaddingX} ${styles.flexCenter}`}>
+      <div className={`bg-primary w-[100%] duration-1000 px-4 ${scrolled ? "flex fixed z-[12] justify-between w-full duration-1000" : ""} ${styles.navPaddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
         </div>
