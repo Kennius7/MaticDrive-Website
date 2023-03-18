@@ -63,8 +63,8 @@ const handleSubmit = (e) => {
         <div className="flex ss:flex-row-reverse flex-col justify-between">
           <div className="ss:w-[40%] w-[100%]">
             <p className={`${styles.paragraph} text-center ss:text-left ss:max-w-[450px] sm:mt-8 sm:ml-8 lg:mt-12 lg:ml-12 ss:leading-[40px] max-w-[500px] mb-4`}>
-              You can reach us at this email address: admin@maticdrive.com <br /> <br />
-              You can also call us, or click <a href="https://wa.me/+2348055549979" target="_blank" ><span className="border-b border-transparent text-green-600 hover:border-yellow-300 hover:text-green-400 text-[18px]">HERE</span></a> to chat us on Whatsapp. <br /> <br />
+              You can reach us at this email address: <a href="mailto:admin@maticdrive.com" target="_blank"><span className="border-b border-transparent text-gradient hover:border-yellow-300">admin@maticdrive.com</span></a> <br /> <br />
+              You can also call us, or click <a href="https://wa.me/+2348055549979" target="_blank" ><span className="border-b border-transparent text-gradient hover:border-yellow-300 text-[18px]">HERE</span></a> to chat us on Whatsapp. <br /> <br />
               Alternatively, you can fill this contact form to send us a message! 
             </p>
           </div>
