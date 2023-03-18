@@ -51,7 +51,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-                <Link to={`${nav.id}`} spy={true} smooth={true} offset={50} duration={1000}>{nav.title}</Link>
+                <Link to={`${nav.id}`} spy={true} smooth={true} offset={50} duration={4000}>{nav.title}</Link>
               </li>
             ))}
           </ul>
