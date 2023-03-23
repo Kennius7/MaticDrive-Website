@@ -27,7 +27,7 @@ const AboutUs = () =>  (
       <p className={`${styles.paragraph} max-w-[550px] my-5`}>
         At Maticdrive, we believe in providing ease, comfort and integrity of service.
         Alongside, we believe in building infrastructure around transportation in Africa 
-        and taking it to the next with our AVs.
+        and taking it to the next level with our AVs.
       </p>
       <a href="#contact">
         <Button styles={`mt-4`} />

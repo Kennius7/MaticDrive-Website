@@ -9,8 +9,8 @@ const ContactUs = () => {
 const form =useRef();
 
 const [buttonText, setButtonText] = useState("Send Message");
-const [style, setStyle] = useState("default");
-const [errorStyle, setErrorStyle] = useState("error-default");
+const [style, setStyle] = useState("bg-text-gradient");
+const [errorStyle, setErrorStyle] = useState("bg-text-gradient");
 const sentStyle = "sent";
 const rejectStyle = "reject";
 
@@ -29,7 +29,7 @@ const handleSubmit = (e) => {
         }, 3000);
         setTimeout(() => {
           e.target.reset();
-          setStyle("default")
+          setStyle("bg-text-gradient")
           setButtonText("Send Message")
         }, 7000);
     }, (error) => {
@@ -39,7 +39,7 @@ const handleSubmit = (e) => {
           setButtonText("Message Not Sent");
         }, 3000);
         setTimeout(() => {
-          // e.target.reset();
+          e.target.reset();
           setButtonText("Please Try Again")
         }, 7000);
         setTimeout(() => {
