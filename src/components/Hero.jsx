@@ -1,5 +1,4 @@
 import styles from "../style";
-import { MaticVid2 } from "../assets";
 import YoutubeEmbed from "./YoutubeEmbed";
 
 
@@ -24,7 +23,7 @@ const Hero = () => {
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
       <div className="">
-        <YoutubeEmbed embedId="8EFgwcbjtyI" />
+        <YoutubeEmbed embedId="MDxSItbvdXM" />
       </div>
         
         {/* gradient start */}

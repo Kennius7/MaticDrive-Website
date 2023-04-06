@@ -24,9 +24,8 @@ import people07 from "./MaticAbdulmatin2.png";
 import people08 from "./MaticAdenike.png";
 import people09 from "./MaticAzeez.png";
 import people10 from "./MaticRachael.png";
-import MaticVid1 from "./MaticDriveVid.mp4";
+import MaticVid1 from "./MaticDriveVid1.mp4";
 import MaticProto from "./MaticProto.jpg";
-import MaticVid2 from "./AVTesting.mp4";
 import contactImg from "./contactImg.svg";
 import features01 from "./FeaturesPics1.jpg";
 import features02 from "./FeaturesPics2.jpg";
@@ -73,7 +72,6 @@ export {
   features06,
   features07,
   MaticVid1,
-  MaticVid2,
   MaticProto,
   contactImg,
   partnership,
