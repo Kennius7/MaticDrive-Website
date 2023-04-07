@@ -67,7 +67,10 @@ const Navbar = () => {
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
                   active === nav.title ? "text-white" : "text-dimWhite"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
+                onClick={() => {
+                  setActive(nav.title);
+                  setToggle(!toggle);
+                }}
               >
                 <Link to={`${nav.id}`} spy={true} smooth={true} offset={50} duration={500}>{nav.title}</Link>
               </li>
