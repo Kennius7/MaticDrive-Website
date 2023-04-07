@@ -2,15 +2,11 @@ import { people01, people02, people03, people04, people05, people06, people07, p
 
 export const navLinks = [
   {
-    id: "home",
+    id: "/",
     title: "Home",
   },
   {
-    id: "highlights",
-    title: "Highlights",
-  },
-  {
-    id: "aboutUs",
+    id: "/aboutus",
     title: "About Us",
   },
   {
@@ -18,11 +14,11 @@ export const navLinks = [
     title: "Features",
   },
   {
-    id: "team",
+    id: "/team",
     title: "Our Team",
   },
   {
-    id: "contact",
+    id: "/contactus",
     title: "Contact Us",
   },
 ];
