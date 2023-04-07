@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import AboutUsPage from "./pages/AboutUsPage";
 import TeamPage from "./pages/TeamPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import BlogPage from "./pages/BlogPage";
 
 
 
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/" element={<Homepage />} exact />
           <Route path="/aboutus" element={<AboutUsPage />} exact />
           <Route path="/team" element={<TeamPage />} exact />
+          <Route path="/blog" element={<BlogPage />} exact />
           <Route path="/contactus" element={<ContactUsPage />} exact />
         </Routes>
 

@@ -7,6 +7,7 @@ import TeamPlayers from "./TeamPlayers";
 import Hero from "./Hero";
 import Banner from "./Banner";
 import ContactUs from "./ContactUs";
+import Blog from "./Blog";
 
 
 export {
@@ -19,4 +20,5 @@ export {
   Hero,
   Banner,
   ContactUs,
+  Blog,
 };

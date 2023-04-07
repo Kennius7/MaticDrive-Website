@@ -35,6 +35,7 @@ import features05 from "./FeaturesPics5.jpg";
 import features06 from "./FeaturesPics6.jpg";
 import features07 from "./FeaturesPics7.jpg";
 import partnership from "./MaticPartnership.png";
+import microsoftBanner from "./MicroSoftStartupsCelebrationBadgeLight.png";
 
 
 export {
@@ -75,4 +76,5 @@ export {
   MaticProto,
   contactImg,
   partnership,
+  microsoftBanner,
 };
