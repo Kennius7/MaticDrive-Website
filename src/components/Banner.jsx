@@ -1,4 +1,4 @@
-import { MaticVid1, microsoftBanner } from "../assets";
+import { MaticVid1 } from "../assets";
 
 
 const Banner = () => {
@@ -14,10 +14,6 @@ const Banner = () => {
                 THE FUTURE OF AV IN AFRICA
               </div>
           </div>
-      </div>
-
-      <div className="flex justify-center items-center">
-        <img src={microsoftBanner} />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "../style";
-import { Blog } from "../components";
+import { Articles, ArticlesForm } from "../components";
 
 
 function BlogPage() {
@@ -8,7 +8,8 @@ function BlogPage() {
     <div>
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
-                <Blog />
+                <Articles />
+                <ArticlesForm />
             </div>
         </div>
     </div>

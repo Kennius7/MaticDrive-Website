@@ -5,7 +5,7 @@ import FeatureCarouselSlider from "./FeatureCarouselSlider";
 
 
 const Features = () => (
-  <section id="features" className={`my-20 ${layout.sectionReverse}`}>
+  <section className={`my-20 ${layout.sectionReverse}`}>
     <div className={layout.sectionImgReverse}>
       <div className="max-w-lg w-full h-[700px] m-auto py-16 px-4">
         <FeatureCarouselSlider autoSlide={true}>
