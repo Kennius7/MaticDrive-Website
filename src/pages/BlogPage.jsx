@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "../style";
-import { Articles, ArticlesForm } from "../components";
+import { Articles, ArticlesForm } from '../components';
 
 
 function BlogPage() {

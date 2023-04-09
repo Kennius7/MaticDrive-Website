@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
@@ -29,9 +30,9 @@ const AboutUs = () =>  (
         Alongside, we believe in building infrastructure around transportation in Africa 
         and taking it to the next level with our AVs.
       </p>
-      <a href="#contact">
+      <Link to="/contactus">
         <Button styles={`mt-4`} />
-      </a>
+      </Link>
       
     </div>
 
