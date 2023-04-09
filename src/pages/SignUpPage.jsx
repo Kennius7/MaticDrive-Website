@@ -3,7 +3,7 @@ import { Register } from '../components';
 
 
 
-function Membership() {
+function SignUpPage() {
   return (
     <div>
       <Register />
@@ -12,4 +12,4 @@ function Membership() {
 }
 
 
-export default Membership
+export default SignUpPage

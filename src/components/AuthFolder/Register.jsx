@@ -49,7 +49,7 @@ function Register() {
         
 
         <div className='flex justify-center items-center'>
-            <button className='w-[150px] h-[50px] rounded-[8px] bg-blue-300' type="button" onClick={handleSignUp}>Register</button>
+            <button className='w-[150px] h-[50px] rounded-[8px] bg-red-600 text-white font-bold' type="button" onClick={handleSignUp}>Register</button>
         </div>
     </div>
   )

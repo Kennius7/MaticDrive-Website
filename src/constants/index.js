@@ -22,8 +22,12 @@ export const navLinks = [
     title: "Contact Us",
   },
   {
-    id: "/member",
-    title: "SignUp/In",
+    id: "/signup",
+    title: "Sign Up",
+  },
+  {
+    id: "/signin",
+    title: "Login",
   },
 ];
 

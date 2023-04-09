@@ -7,7 +7,8 @@ import AboutUsPage from "./pages/AboutUsPage";
 import TeamPage from "./pages/TeamPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import BlogPage from "./pages/BlogPage";
-import Membership from "./pages/Membership";
+import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 
 
 
@@ -46,7 +47,8 @@ const App = () => {
           <Route path="/team" element={<TeamPage />} exact />
           <Route path="/blog" element={<BlogPage />} exact />
           <Route path="/contactus" element={<ContactUsPage />} exact />
-          <Route path="/member" element={<Membership />} exact />
+          <Route path="/signup" element={<SignUpPage />} exact />
+          <Route path="/signin" element={<SignInPage />} exact />
         </Routes>
 
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
