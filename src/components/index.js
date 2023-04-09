@@ -12,6 +12,7 @@ import ArticlesForm from "./BlogFolder/ArticlesForm";
 import DeleteArticle from "./BlogFolder/DeleteArticle";
 import Register from "./AuthFolder/Register";
 import Login from "./AuthFolder/Login";
+import LikeArticles from "./BlogFolder/LikeArticles";
 
 
 
@@ -30,4 +31,5 @@ export {
   DeleteArticle,
   Register,
   Login,
+  LikeArticles,
 };

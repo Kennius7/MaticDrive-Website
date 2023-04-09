@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.10.0",
     "@ionic/react": "^7.0.1",
     "firebase": "^9.19.1",
+    "font-awesome": "^4.7.0",
     "graphql": "^16.6.0",
     "graphql-request": "^5.2.0",
     "ionicons": "^7.1.0",

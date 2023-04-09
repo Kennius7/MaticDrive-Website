@@ -68,7 +68,7 @@ const Navbar = () => {
             <Link to={`${nav.id}`}>{nav.title}</Link>
           </li>
         ))}
-        <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-center text-white font-semibold pb-1 ml-6 -mr-12 bg-red-500 rounded-[7px]">Logout</button>
+        <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-center text-white font-semibold pb-1 ml-6 -mr-12 bg-text-gradient rounded-[7px]">Logout</button>
       </ul>
 
       <div className="md:hidden flex flex-1 justify-end items-center pr-4">
@@ -101,7 +101,11 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-start text-white font-semibold pl-2 pb-1 mt-4 bg-red-500 rounded-[7px]">Logout</button>
+          <button onClick={() => { 
+            signOut(auth); 
+            setToggle(!toggle);
+            }} 
+            className="w-[80px] h-[30px] text-[14px] text-start text-white font-semibold pl-2 pb-1 mt-4 bg-text-gradient rounded-[7px]">Logout</button>
         </div>
 
       </div>

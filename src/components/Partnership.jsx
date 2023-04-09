@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Partnership = () => {
   return (
-    <section id="partners" className={`${styles.flexCenter} ${styles.marginYPartner} ${styles.paddingPart} md:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
+    <section className={`${styles.flexCenter} ${styles.marginYPartner} ${styles.paddingPart} md:flex-row flex-col bg-black-gradient-2 rounded-[20px] box-shadow`}>
       <div className="flex ss:flex-row flex-col items-center">
         <div className="flex flex-col">
 

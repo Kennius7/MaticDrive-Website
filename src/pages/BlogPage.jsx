@@ -8,8 +8,8 @@ function BlogPage() {
     <div>
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
-                <Articles />
-                <ArticlesForm />
+              <ArticlesForm />
+              <Articles />
             </div>
         </div>
     </div>
