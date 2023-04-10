@@ -25,7 +25,7 @@ function LikeArticles({ id, likes }) {
   return (
     <div>
         <i className={`fa fa-heart${!likes?.includes(user.uid) ? "-o" : "" } fa-lg cursor-pointer 
-            ${likes?.includes(user.uid) ? "text-red-600" : "text-white"}`} 
+            ${likes?.includes(user.uid) ? "text-red-600" : "text-primary"}`} 
             onClick={handleLike}
         />
     </div>

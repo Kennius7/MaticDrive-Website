@@ -4,7 +4,7 @@ import YoutubeEmbed from "./YoutubeEmbed";
 
 const Hero = () => {
   return (
-    <section id="highlights" className={`flex md:flex-row flex-col mt-20 ${styles.paddingY}`}>
+    <section className={`flex md:flex-row flex-col mt-6 ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
         <div className="flex flex-row justify-between items-center w-full">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[60px] text-[32px] text-white ss:leading-[70px] leading-[55px]">

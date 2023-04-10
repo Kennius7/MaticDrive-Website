@@ -29,7 +29,7 @@ function Articles() {
   return (
     <div className='text-primary'>
         {
-          articles.length === 0 ? (<p>No Articles found!</p>) : (articles.map(({id, title, description, postContent, imageUrl, createdAt, createdBy, userId, likes, comments}) => (
+          articles.length === 0 ? (<p>No Articles found!</p>) : (articles.map(({ id, title, description, postContent, imageUrl, createdAt, createdBy, userId, likes, comments }) => (
             <div className="bg-gray-300 my-12" key={id}>
               <div>
                 
@@ -50,11 +50,34 @@ function Articles() {
               </div>
               <div><span className="text-[15px]">Created At:</span> <span className="text-blue-700">{createdAt.toDate().toDateString()}</span></div>
               
-              <div>
-                {
-                  user && (<LikeArticles id={id} likes={likes} />)
-                }
+              <div className="flex flex-row">
+                <div className="flex flex-row">
+                  {
+                    user && (<LikeArticles id={id} likes={likes} />)
+                  }
+                  <div className="ml-2">
+                    <div>
+                      {
+                        likes && likes.length > -1 && (
+                          <p>{ likes?.length } likes</p>
+                        )
+                      }
+                    </div>
+                  </div>
+                </div>
+                <div className="ml-2">
+                  <div>
+                    {
+                      comments && comments.length > -1 && (
+                        <div>
+                          <p>{ comments?.length } comments</p>
+                        </div>
+                      )
+                    }
+                  </div>
+                </div>
               </div>
+              
             </div>
             )))
         }

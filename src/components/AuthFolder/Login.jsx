@@ -1,6 +1,6 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React, { useState } from 'react';
-import { auth } from '../../firebaseConfig';
+import { auth, provider } from '../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -21,6 +21,28 @@ function Login() {
     }
   }
 
+  const handleGoogleSignIn = async () => {
+    await signInWithPopup(auth, provider)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      // const credential = provider.credentialFromResult(result);
+      // const token = credential.accessToken;
+      // The signed-in user info.
+      // const user = result.user;
+      // IdP data available using getAdditionalUserInfo(result)
+      console.log(result);
+      navigate("/blog");
+    }).catch((error) => {
+      toast(error.code, { type: "error" });
+      toast(error.message, { type: "error" });
+      // The email of the user's account used.
+      // const email = error.customData.email;
+      // The AuthCredential type that was used.
+      // const credential = provider.credentialFromError(error);
+    });
+  }
+
+  
 
 
   return (
@@ -42,6 +64,9 @@ function Login() {
       
       <div className='flex justify-center items-center'>
           <button className='w-[150px] h-[50px] rounded-[8px] bg-blue-600 font-bold text-white' type="button" onClick={handleSignIn}>Login</button>
+      </div>
+      <div className="flex justify-center items-center mt-10">
+        <button onClick={handleGoogleSignIn} className="text-primary font-bold w-[200px] h-[40px] bg-text-gradient rounded-[7px]">Sign in with Google?</button>
       </div>
     </div>
   )
