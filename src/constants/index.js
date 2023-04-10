@@ -60,8 +60,8 @@ export const teamMembers = [
   },
   {
     id: 1,
-    name: "Osatohanmwen Ben-Iyare",
-    title: "Technical Project Manager",
+    name: "Osato Ben-Iyare",
+    title: "Project Mngr (Tech.)",
     img: people02,
   },
   {
@@ -78,7 +78,7 @@ export const teamMembers = [
   },
   {
     id: 4,
-    name: "Rachael Oshuwa Ugbomeh",
+    name: "Rachael Ugbomeh",
     title: "Product Manager",
     img: people10,
   },
@@ -102,13 +102,13 @@ export const teamMembers = [
   },
   {
     id: 8,
-    name: "Abdulmatin Gbolahan Lawal",
-    title: "Lead UI/UX Designer",
+    name: "Abdulmatin Lawal",
+    title: "UI/UX Team Lead",
     img: people07,
   },
   {
     id: 9,
-    name: "Adesanya Ruqoyah Adenike",
+    name: "Adesanya Adenike",
     title: "UI/UX Designer",
     img: people08,
   },

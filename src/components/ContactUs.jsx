@@ -52,7 +52,7 @@ const handleSubmit = (e) => {
 
 
   return (
-    <section id="contact" className={`my-20 ${layout.section}`}>
+    <section id="contact" className={`mb-20 ${layout.section}`}>
       <div className="items-center w-full">
 
         <div className="flex flex-col justify-center items-center my-3 pb-4 sm:mb-16">

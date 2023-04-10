@@ -78,8 +78,9 @@ function ArticlesForm() {
     <div className='text-white flex flex-col'>
       
       {
-        !user ? <div className='p-2 bg-black-gradient-2 rounded-[10px] box-shadow'>
-                  <span className='font-semibold text-[20px]'><Link className='text-[25px] text-gradient' to="/signin">Login</Link> to access Blog Section</span> <br/> Don't have an account? <Link className='text-gradient' to="/signup">Sign up</Link>
+        !user ? <div className='flex flex-col justify-center items-center p-2 mx-4 mb-56 mt-60 bg-black-gradient-2 rounded-[10px] box-shadow'>
+                  <span className='font-semibold my-4 text-[22px]'><Link className='text-[30px] text-gradient' to="/signin">Login</Link> to access Blog Section</span>
+                  <div className="font-semibold mb-4">Don't have an account? <Link className='text-gradient' to="/signup">Sign up</Link></div>
                 </div> : <div>
                 <div className='my-4 font-bold text-[25px] text-center'>Create Article</div>
                   <div className='flex flex-col mb-4'>
