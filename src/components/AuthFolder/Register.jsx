@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -50,6 +50,10 @@ function Register() {
 
         <div className='flex justify-center items-center'>
             <button className='w-[150px] h-[50px] rounded-[8px] bg-red-600 text-white font-bold' type="button" onClick={handleSignUp}>Register</button>
+        </div>
+
+        <div className="flex justify-center items-center mt-4">
+            <p className="text-white">Wanna sign in? <span className="text-gradient font-bold"><Link to="/signin">CLICK HERE</Link></span></p>
         </div>
     </div>
   )

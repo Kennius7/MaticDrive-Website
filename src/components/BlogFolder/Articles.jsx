@@ -5,6 +5,8 @@ import DeleteArticle from './DeleteArticle';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { LikeArticles } from "../../components";
 import { Link } from 'react-router-dom';
+import styles from '../../style';
+import { people06 } from '../../assets';
 
 
 function Articles() {
@@ -26,60 +28,74 @@ function Articles() {
   }, [])
 
 
+  
+  
   return (
-    <div className='text-primary'>
+    <div className="">
         {
-          articles.length === 0 ? (<p>No Articles found!</p>) : (articles.map(({ id, title, description, postContent, imageUrl, createdAt, createdBy, userId, likes, comments }) => (
-            <div className="bg-gray-300 my-12" key={id}>
-              <div>
-                
-                <div>{user && userId === userId && (<DeleteArticle id={id} imageUrl={imageUrl} />)}</div>
+          articles.length === 0 ? (
+            <div className="flex flex-col justify-center items-center text-white mt-8">
+              <img className={`w-[110px] h-[110px] rounded-[50%] -mb-16 z-[1]`} src={ people06 } alt="Profile Pics" />
+              <div className={`${styles.flexCenter} ${styles.marginYPartner} 
+                 ${styles.paddingPart} md:flex-row flex-col bg-black-gradient-2 text-center rounded-[15px] box-shadow text-[17px]`}>
+                 <br/>
+                 Hello! My name is Judith and welcome to our blog section. <br/> <br/> You're most probably 
+                 seeing this page because you are not connected to the internet. <br/> <br/> Anyways, here you can 
+                 learn more about us and every other thing relating to Matic Drive. <br/> <br/>
+                 Please feel to peruse through our blogs and drop your comments as well, as that will
+                 be much welcome! <br/> <br/> Just reload your page and you'll be good to go!
               </div>
-              <Link to={`/article/${id}`}>
-                <img src={imageUrl} alt='Post Picture' />
-              </Link>
-              
-              <div className='font-bold text-[20px]'>{title}</div>
-              <div className='font-semibold text-[17px]'>{description}</div>
-              <div>{postContent}</div>
-              <div className="mt-8">{createdBy && 
-                (<div>
-                  <span className="text-[15px]">Created by: </span> 
-                  <span className="font-semibold">{createdBy}</span>
-                </div>)}
-              </div>
-              <div><span className="text-[15px]">Created At:</span> <span className="text-blue-700">{createdAt.toDate().toDateString()}</span></div>
-              
-              <div className="flex flex-row">
-                <div className="flex flex-row">
-                  {
-                    user && (<LikeArticles id={id} likes={likes} />)
-                  }
-                  <div className="ml-2">
-                    <div>
+            </div>) : (articles.map(({ id, title, description, postContent, imageUrl, createdAt, createdBy, userId, likes, comments }) => (
+                <div className="bg-gray-300 my-12" key={id}>
+                  <div>
+                    <div>{user && userId === userId && (<DeleteArticle id={id} imageUrl={imageUrl} />)}</div>
+                  </div>
+                  <Link to={`/article/${id}`}>
+                    <img src={imageUrl} alt='Post Picture' />
+                  </Link>
+                  
+                  <div className='font-bold text-[20px]'>{title}</div>
+                  <div className='font-semibold text-[17px]'>{description}</div>
+                  <div>{postContent}</div>
+                  <div className="mt-8">{createdBy && 
+                    (<div>
+                      <span className="text-[15px]">Created by: </span> 
+                      <span className="font-semibold">{createdBy}</span>
+                    </div>)}
+                  </div>
+                  <div><span className="text-[15px]">Created At:</span> <span className="text-blue-700">{createdAt.toDate().toDateString()}</span></div>
+                  
+                  <div className="flex flex-row">
+                    <div className="flex flex-row">
                       {
-                        likes && likes.length > -1 && (
-                          <p>{ likes?.length } likes</p>
-                        )
+                        user && (<LikeArticles id={id} likes={likes} />)
                       }
+                      <div className="ml-2">
+                        <div>
+                          {
+                            likes && likes.length > -1 && (
+                              <p>{ likes?.length } likes</p>
+                            )
+                          }
+                        </div>
+                      </div>
+                    </div>
+                    <div className="ml-2">
+                      <div>
+                        {
+                          comments && comments.length > -1 && (
+                            <div>
+                              <p>{ comments?.length } comments</p>
+                            </div>
+                          )
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="ml-2">
-                  <div>
-                    {
-                      comments && comments.length > -1 && (
-                        <div>
-                          <p>{ comments?.length } comments</p>
-                        </div>
-                      )
-                    }
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            )))
+              )
+            )
+          )
         }
     </div>
   )

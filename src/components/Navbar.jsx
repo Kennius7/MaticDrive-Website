@@ -39,7 +39,7 @@ const Navbar = () => {
       <div>
 
         <div className="flex justify-center items-center">
-          <img src={logo} alt="Maticdrive logo" className={`${scrolled ? "w-[35px] h-[35px] ss:w-[50px] ss:h-[50px] duration-1000" : ""} w-[50px] h-[50px] ss:w-[70px] ss:h-[70px] m-2`} />
+          <Link to="/"><img src={logo} alt="Maticdrive logo" className={`${scrolled ? "w-[35px] h-[35px] ss:w-[50px] ss:h-[50px] duration-1000" : ""} w-[50px] h-[50px] ss:w-[70px] ss:h-[70px] m-2`} /></Link>
 
           <div className="flex flex-col -mt-2">
             <div className="text-[20px] text-white">Matic <span className="text-gradient">Drive</span></div>
@@ -68,7 +68,7 @@ const Navbar = () => {
             <Link to={`${nav.id}`}>{nav.title}</Link>
           </li>
         ))}
-        <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-center text-white font-semibold pb-1 ml-6 -mr-12 bg-text-gradient rounded-[7px]">Logout</button>
+        <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-center text-primary font-semibold pb-1 ml-6 -mr-12 bg-text-gradient rounded-[7px]">Logout</button>
       </ul>
 
       <div className="md:hidden flex flex-1 justify-end items-center pr-4">
@@ -105,7 +105,7 @@ const Navbar = () => {
             signOut(auth); 
             setToggle(!toggle);
             }} 
-            className="w-[80px] h-[30px] text-[14px] text-start text-white font-semibold pl-2 pb-1 mt-4 bg-text-gradient rounded-[7px]">Logout</button>
+            className="w-[80px] h-[30px] text-[14px] text-start text-primary font-bold pl-2 pb-1 mt-4 bg-text-gradient rounded-[7px]">Logout</button>
         </div>
 
       </div>

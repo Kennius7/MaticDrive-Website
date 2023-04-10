@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "../style";
-import { Articles, ArticlesForm } from '../components';
+import { Articles } from '../components';
+import { Link } from 'react-router-dom';
 
 
 function BlogPage() {
@@ -8,7 +9,9 @@ function BlogPage() {
     <div>
         <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
-              <ArticlesForm />
+              <div>
+                <p className="text-white text-center"><Link to="/createarticle">Blog Admin Section</Link></p>
+              </div>
               <Articles />
             </div>
         </div>
