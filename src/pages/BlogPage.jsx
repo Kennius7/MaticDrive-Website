@@ -4,13 +4,15 @@ import { Articles } from '../components';
 import { Link } from 'react-router-dom';
 import { people06 } from '../assets';
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import { db } from "../firebaseConfig";
+import { db, auth } from "../firebaseConfig";
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 
 
 function BlogPage() {
   const [articles, setArticles] = useState([]);
+  const [user] = useAuthState(auth);
 
   useEffect(() => {
     const articleRef = collection(db, "Posts");
@@ -37,7 +39,7 @@ function BlogPage() {
 
             <div>
               {
-                articles.length > 0 ? (
+                user && articles.length > 0 ? (
                   <div className="flex flex-col justify-center items-center text-white mt-8">
                     <img className={`w-[110px] h-[110px] rounded-[50%] -mb-16 z-[1]`} src={ people06 } alt="Profile Pics" />
                     <div className={`${styles.flexCenter} ${styles.marginYPartner} 

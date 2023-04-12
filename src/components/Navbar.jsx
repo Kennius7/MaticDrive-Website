@@ -62,13 +62,13 @@ const Navbar = () => {
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] hover:border-b-4 hover:pb-2 hover:border-yellow-300 ${
               active === nav.title ? "text-white" : "text-gray-400"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-8"}`}
+            } ${user && nav.title === "Sign In" ? "hidden" : "block"} mr-6`}
             onClick={() => setActive(nav.title)}
           >
             <Link to={`${nav.id}`}>{nav.title}</Link>
           </li>
         ))}
-        <button onClick={() => { signOut(auth) }} className="w-[80px] h-[30px] text-[14px] text-center text-primary font-semibold pb-1 ml-6 -mr-12 bg-text-gradient rounded-[7px]">Logout</button>
+        <button onClick={() => { signOut(auth) }} className={`${user ? "block" : "hidden"} w-[80px] h-[30px] text-[14px] text-center text-primary font-semibold pb-1 -mr-12 bg-text-gradient rounded-[7px]`}>Sign Out</button>
       </ul>
 
       <div className="md:hidden flex flex-1 justify-end items-center pr-4">
@@ -91,7 +91,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
                   active === nav.title ? "text-white" : "text-dimWhite"
-                } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                } ${user && nav.title === "Sign In" ? "hidden" : "block"} mb-4`}
                 onClick={() => {
                   setActive(nav.title);
                   setToggle(!toggle);
@@ -105,7 +105,7 @@ const Navbar = () => {
             signOut(auth); 
             setToggle(!toggle);
             }} 
-            className="w-[80px] h-[30px] text-[14px] text-start text-primary font-bold pl-2 pb-1 mt-4 bg-text-gradient rounded-[7px]">Logout</button>
+            className={`${user ? "block" : "hidden"} w-[80px] h-[30px] text-[14px] text-start text-primary font-bold pl-2 pb-1 bg-text-gradient rounded-[7px]`}>Sign Out</button>
         </div>
 
       </div>

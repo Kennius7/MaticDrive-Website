@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { auth, provider } from '../../firebaseConfig';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { googleLogo2 } from '../../assets';
 
 
 
@@ -13,11 +14,16 @@ function Login() {
 
 
   const handleSignIn = async () => {
+    if (!email || !password) {
+      toast("Please fill out all necessary fields", { type: "error" });
+      return;
+    }
+
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/blog");
     } catch (error) {
-      toast(error.code, { type: "error" })
+      toast("Error signing in", { type: "error" })
     }
   }
 
@@ -33,8 +39,7 @@ function Login() {
       console.log(result);
       navigate("/blog");
     }).catch((error) => {
-      toast(error.code, { type: "error" });
-      toast(error.message, { type: "error" });
+      toast("Error signing in with Google", { type: "error" });
       // The email of the user's account used.
       // const email = error.customData.email;
       // The AuthCredential type that was used.
@@ -46,31 +51,34 @@ function Login() {
 
 
   return (
-    <div className=''>
-      <div className="mx-4 mt-6 font-bold text-[25px] text-center text-white">Login</div>
+    <div className="my-20 flex flex-col justify-center items-center">
+      
+      <div className="mx-4 mb-10 font-bold text-[25px] text-center text-white tracking-wider">Sign In</div>
 
-      <div className="flex flex-col justify-center items-center my-10">
-          <div className='flex flex-col justify-center items-start my-2'>
-              <label className='text-white' htmlFor=''>Email</label>
-              <input className='w-[300px] h-[30px]' onChange={(e) => {setEmail(e.target.value)}} type='email' name='email' placeholder='Enter your Email' />
+      <div className="w-full flex flex-col justify-center items-center mb-6">
+          <div className='w-full flex my-4 justify-center items-center'>
+              <input className='w-[80%] h-[30px] rounded-[3px] pl-2 placeholder:text-gray-700' onChange={(e) => {setEmail(e.target.value)}} type='email' name='email' placeholder='Enter your Email' />
           </div>
 
-          <div className='flex flex-col justify-center items-start my-2'>
-              <label className='text-white' htmlFor=''>Password</label>
-              <input className='w-[300px] h-[30px]' onChange={(e) => {setPassword(e.target.value)}} type='password' name='passsword' placeholder='Enter your password' />
+          <div className='w-full flex my-4 justify-center items-center'>
+              <input className='w-[80%] h-[30px] rounded-[3px] pl-2 placeholder:text-gray-700' onChange={(e) => {setPassword(e.target.value)}} type='password' name='passsword' placeholder='Enter your password' />
           </div>
       </div>
       
-      <div className='flex justify-center items-center mt-20'>
-          <button className='w-[150px] h-[50px] rounded-[8px] text-[18px] tracking-wider bg-text-gradient font-bold text-primary' type="button" onClick={handleSignIn}>Login</button>
+      <div className='w-full flex justify-center items-center mt-6'>
+          <button className='w-[80%] h-[40px] rounded-[4px] text-[18px] tracking-wider bg-text-gradient font-bold text-primary' type="button" onClick={handleSignIn}>Login</button>
       </div>
 
-      <div className="flex justify-center items-center mt-4">
-        <p className="text-white">Wanna sign up? <span className="text-red-600 font-bold"><Link to="/signup">CLICK HERE</Link></span></p>
+      <div className="flex justify-center items-center mt-2">
+        <p className="text-red-400 font-semibold tracking-wider"><Link to="/signup">Create Account</Link></p>
       </div>
 
-      <div className="flex justify-center items-center mt-24">
-        <button onClick={handleGoogleSignIn} className="text-white font-bold w-[200px] h-[40px] bg-green-600 rounded-[7px]">Sign in with Google</button>
+      <div className="w-full flex justify-center items-center mt-16">
+        <button onClick={handleGoogleSignIn} className="flex justify-center items-center text-white font-bold w-[80%] h-[40px] bg-blue-800 rounded-[7px]">
+          <div className="flex items-center">
+            <img className="w-[32px] h-[32px] mr-3" src={googleLogo2} alt="google logo" />Sign in with Google
+          </div>
+        </button>
       </div>
     </div>
   )

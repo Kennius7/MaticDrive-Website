@@ -26,18 +26,24 @@ function Article() {
                 article && (
                             <div className="bg-primary">
                                 <img src={ article.imageUrl } alt={ article.title } />
-                                <div className="text-white">
-                                    <div>{ article.title }</div>
-                                    <div>{ article.description }</div>
-                                    <hr className="bg-black"/>
-                                    <div>Author: { article.createdBy }</div>
-                                    <div>Posted on: { article.createdAt.toDate().toDateString() }</div>
-                                    <div>
-                                        { user && (<LikeArticles id={id} likes={article.likes} />) }
-                                        <div>
-                                            <p>{ article.likes.length }</p>
+                                <div className="text-white mx-2 mt-2">
+                                    <div className='font-bold'>{ article.title }</div>
+                                    <div className='font-semibold'>{ article.description }</div>
+                                    <hr className="bg-white border border-white"/>
+                                    <div className='flex flex-row justify-around items-center mb-20'>
+                                        <div className='flex flex-col justify-start -ml-16 mr-8'>
+                                            <div className='text-[13px]'>Author: { article.createdBy }</div>
+                                            <div className='text-[12px]'>Posted on: { article.createdAt.toDate().toDateString() }</div>
+                                        </div>
+                                        
+                                        <div className='flex -mr-16'>
+                                            { user && (<LikeArticles id={id} likes={article.likes} />) }
+                                            <div>
+                                                <p>{ article.likes.length }</p>
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                     <Comments id={ article.id } />
                                 </div>
                             </div>

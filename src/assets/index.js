@@ -37,6 +37,8 @@ import features06 from "./FeaturesPics6.jpg";
 import features07 from "./FeaturesPics7.jpg";
 import partnership from "./MaticPartnership.png";
 import microsoftBanner from "./MicroSoftStartupsCelebrationBadgeLight.png";
+import googleLogo1 from "./google-logo.png";
+import googleLogo2 from "./google-logo-shady.png";
 
 
 export {
@@ -79,4 +81,6 @@ export {
   contactImg,
   partnership,
   microsoftBanner,
+  googleLogo1,
+  googleLogo2,
 };

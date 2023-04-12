@@ -1,12 +1,16 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 import React from 'react';
-import { db, storage } from '../../firebaseConfig';
+import { db, storage, auth } from '../../firebaseConfig';
 import { deleteObject, ref } from 'firebase/storage';
 import { toast } from "react-toastify";
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 
 function DeleteArticle({id, imageUrl}) {
+    const blogAdminUid = "gjSWaw1PnsZMfCntqQGDCSvErH93";
+    const [currentlyLoggedInUser] = useAuthState(auth);
+
 
     const handleDelete = async () => {
       if (window.confirm("Are you sure you want to delete this?")) {
@@ -24,7 +28,10 @@ function DeleteArticle({id, imageUrl}) {
 
 
   return (
-    <i onClick={handleDelete} className={`fa fa-times fa-lg cursor-pointer`} />
+    <div className={`${currentlyLoggedInUser.uid === blogAdminUid ? "block" : "hidden"}`}>
+      <i onClick={handleDelete} className={` fa fa-times fa-lg cursor-pointer hidden`} />
+    </div>
+    
   )
 }
 

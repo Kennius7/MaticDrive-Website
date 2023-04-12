@@ -33,15 +33,16 @@ function Articles() {
   return (
     <div className="">
         {
-          articles.length === 0 ? (
+          !user || articles.length === 0 ? (
             <div className="flex flex-col justify-center items-center text-white mt-8">
               <img className={`w-[110px] h-[110px] rounded-[50%] -mb-16 z-[1]`} src={ people06 } alt="Profile Pics" />
               <div className={`${styles.flexCenter} ${styles.marginYPartner} 
                  ${styles.paddingPart} md:flex-row flex-col bg-black-gradient-2 text-center rounded-[15px] box-shadow text-[17px]`}>
                  <br/>
                  Hello! My name is Judith and welcome to our blog section. <br/> <br/> You're most probably 
-                 seeing this page because you are not connected to the internet. <br/> <br/> Anyways, here you can 
-                 learn more about us and every other thing relating to Matic Drive. <br/> <br/>
+                 seeing this page because you are not signed in or you are having some issues with your internet.
+                  <br/> <br/> Anyways, here you can learn more about us and every other thing relating 
+                  to Matic Drive. <br/> <br/>
                  Please feel to peruse through our blogs and drop your comments as well, as that will
                  be much welcome! <br/> <br/> Just reload your page and you'll be good to go!
               </div>
@@ -85,7 +86,7 @@ function Articles() {
                         {
                           comments && comments.length > -1 && (
                             <div>
-                              <p>{ comments?.length } comments</p>
+                              <p><Link to={`/article/${id}`}>{ comments?.length } comments</Link></p>
                             </div>
                           )
                         }

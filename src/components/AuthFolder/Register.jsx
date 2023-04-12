@@ -14,12 +14,19 @@ function Register() {
     let navigate = useNavigate()
 
     const handleSignUp = async () => {
+        if (!name || !email || !password) {
+            toast("Please fill out all necessary fields", { type: "error" });
+            return;
+          }
+      
+
         try {
             await createUserWithEmailAndPassword(auth, email, password);
             updateProfile(auth.currentUser, { displayName: name });
             navigate("/blog");
         } catch (error) {
-            toast(error.code, { type: "error" })
+            toast(error.code, { type: "error" });
+            toast(error.message, { type: "error" });
         }
         
     }
@@ -27,34 +34,35 @@ function Register() {
 
 
   return (
-    <div className=''>
-        <div className="mx-4 mt-10 font-bold text-[25px] text-center text-white">Register</div>
+    <div className="my-20 flex flex-col justify-center items-center">
 
-        <div className="flex flex-col justify-center items-center mb-10">
-            <div className='flex flex-col justify-center items-start my-2'>
-                <label className='text-white' htmlFor=''>Name</label>
-                <input className='w-[300px] h-[30px]' onChange={(e) => {setName(e.target.value)}} type='text' name='name' placeholder='Enter your name' />
+        <div className="mx-4 mb-10 font-bold text-[25px] text-center text-white">Sign Up</div>
+
+        <div className="w-full flex flex-col justify-center items-center mb-10">
+
+            <div className='w-full flex justify-center items-center my-4'>
+                <input className='w-[80%] h-[30px] rounded-[3px] placeholder:text-gray-500 pl-2' onChange={(e) => {setName(e.target.value)}} type='text' name='name' placeholder='Your Name' />
             </div>
 
-            <div className='flex flex-col justify-center items-start my-2'>
-                <label className='text-white' htmlFor=''>Email</label>
-                <input className='w-[300px] h-[30px]' onChange={(e) => {setEmail(e.target.value)}} type='email' name='email' placeholder='Enter your Email' />
+            <div className='w-full flex justify-center items-center my-4'>
+                <input className='w-[80%] h-[30px] rounded-[3px] placeholder:text-gray-500 pl-2' onChange={(e) => {setEmail(e.target.value)}} type='email' name='email' placeholder='Your Email' />
             </div>
 
-            <div className='flex flex-col justify-center items-start my-2'>
-                <label className='text-white' htmlFor=''>Password</label>
-                <input className='w-[300px] h-[30px]' onChange={(e) => {setPassword(e.target.value)}} type='password' name='passsword' placeholder='Enter your password' />
+            <div className='w-full flex justify-center items-center my-4'>
+                <input className='w-[80%] h-[30px] rounded-[3px] placeholder:text-gray-500 pl-2' onChange={(e) => {setPassword(e.target.value)}} type='password' name='passsword' placeholder='Your Password' />
             </div>
+
         </div>
         
 
-        <div className='flex justify-center items-center'>
-            <button className='w-[150px] h-[50px] rounded-[8px] bg-red-600 text-white font-bold' type="button" onClick={handleSignUp}>Register</button>
+        <div className='w-full flex justify-center items-center'>
+            <button className='w-[80%] h-[40px] rounded-[5px] bg-text-gradient text-primary font-bold text-[18px] tracking-widest' type="button" onClick={handleSignUp}>Sign Up</button>
         </div>
 
-        <div className="flex justify-center items-center mt-4">
-            <p className="text-white">Wanna sign in? <span className="text-gradient font-bold"><Link to="/signin">CLICK HERE</Link></span></p>
+        <div className="flex justify-center items-center mt-3">
+            <Link to="/signin"><p className="text-white font-semibold text-[14px] tracking-wider">Already signed up? Sign In.</p></Link>
         </div>
+
     </div>
   )
 }

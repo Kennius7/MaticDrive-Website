@@ -33,6 +33,7 @@ function Comments({id}) {
             .then(() => {
                 setComment("");
             });
+
         }
     }
 
@@ -55,20 +56,43 @@ function Comments({id}) {
 
   return (
     <div>
-        <div>
+
+        <div className="w-full mb-10 flex justify-start">
+            {
+                currentlyLoggedInUser && (
+                    <div>
+                        <label>Write Your Comments Here</label>
+                        <textarea 
+                        type="text" 
+                        className="bg-gray-700 w-[90%] h-[80px] rounded-[3px]" 
+                        value={comment} 
+                        onChange={(e) => { setComment(e.target.value) }}  
+                        onKeyUp={(e) => { handleChangeComment(e) }}
+                        />
+                    </div>
+                    
+                )
+            }
+        </div>
+
+        <div className="w-full flex flex-col justify-start bg-gray-800 w-[100%] mr-2 pl-2 pt-2">
             {
                 comments !== null && comments.map(
                     ({ commentId, user, comment, userName, createdAt }) => 
-                        <div key={commentId}>
-                            <div>
-                                <span className={`${user === currentlyLoggedInUser.uid ? "bg-blue-500" : "bg-red-500"}`}>{ userName }</span>
+                        <div className='w-[90%] mb-6 bg-gray-900 rounded-[3px] pl-1 pt-1' key={commentId}>
+                            <div className='flex flex-col justify-start'>
+                                <span className={`${user === currentlyLoggedInUser.uid ? "text-blue-500" : "text-red-500"} font-bold text-[13px]`}>{ userName }</span>
+                                <hr className='bg-white opacity-30 w-[250px] mb-2' />
                                 { comment }
                             </div>
                             <div>
                                 {
                                     user === currentlyLoggedInUser.uid && (
-                                        <i className="fa fa-times fa-lg text-white cursor-pointer" 
-                                            onClick={() => { handleDeleteComment({comment, commentId, user, userName, createdAt}) }} />
+                                        <div className='flex justify-end'>
+                                            <i className="fa fa-times fa-sm text-white cursor-pointer" 
+                                                onClick={() => { handleDeleteComment({comment, commentId, user, userName, createdAt}) }} />
+                                        </div>
+                                        
                                     )
                                 }
                             </div>
@@ -76,20 +100,7 @@ function Comments({id}) {
                     )
             }
         </div>
-        <div>
-            {
-                currentlyLoggedInUser && (
-                    <input 
-                    type="text" 
-                    className="bg-gray-500" 
-                    value={comment} 
-                    onChange={(e) => { setComment(e.target.value) }} 
-                    placeholder="Add a comment" 
-                    onKeyUp={(e) => { handleChangeComment(e) }}
-                    />
-                )
-            }
-        </div>
+       
     </div>
   )
 }

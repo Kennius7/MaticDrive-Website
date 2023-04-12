@@ -69,7 +69,7 @@ const handleSubmit = (e) => {
             </p>
           </div>
 
-          <div className="bg-white rounded-[8px] py-3 ss:w-[58%] w-[100%]">
+          <div className="bg-white rounded-[4px] py-3 ss:w-[58%] w-[100%]">
             <form ref={form} className="form__content w-[100%] h-[100%]" onSubmit={handleSubmit}>
               
               <div className="form__box">
