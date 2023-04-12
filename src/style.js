@@ -14,6 +14,7 @@ const styles = {
   navPaddingX: "md:px-16 px-0",
   paddingX: "sm:px-16 px-6",
   paddingY: "sm:py-16 py-6",
+  paddingY2: "sm:py-16 py-0",
   padding: "sm:px-16 px-6 sm:py-12 py-4",
   paddingPart: "sm:px-8 px-6 md:py-12 sm:py-8 py-4",
 
@@ -24,10 +25,12 @@ const styles = {
 
 export const layout = {
   section: `flex md:flex-row flex-col ${styles.paddingY}`,
+  section2: `flex md:flex-row flex-col ${styles.paddingY2}`,
   sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
 
   sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
   sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
+  sectionImg2: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-16 relative`,
 
   sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
 };

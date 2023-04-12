@@ -1,25 +1,23 @@
-import { Link } from "react-router-dom";
 import { features } from "../constants";
 import styles, { layout } from "../style";
-import Button from "./Button";
 
 
 
 const FeatureCard = ({ icon, title, content, index }) => (
-  <div className={`flex flex-col p-4 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card2`}>
+  <div className={`flex flex-col p-2 rounded-[5px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} bg-transparent`}>
     <div className="flex justify-start items-center -mt-3 w-[100%] h-[50px] bg-transparent">
       <img src={icon} alt="star" className=" w-[50px] h-[50px]" />
-      <h4 className="pl-2 font-poppins font-semibold text-primary text-center ss:text-[18px] text-[16px]">{title}</h4>
+      <h4 className="pl-2 font-poppins font-semibold text-white text-center ss:text-[18px] text-[16px]">{title}</h4>
     </div>
-    
-    <p className="mt-2 mx-4 font-poppins font-normal tracking-wide text-primary text-[14px] leading-[20px] newline">
+    <hr className="w-full border border-white bg-white" />
+    <p className="mt-2 mx-4 ss:mx-0 -mx-0 font-poppins font-normal tracking-wide text-white text-[14px] leading-[20px] newline">
       {content}
     </p>
   </div>
 );
 
 const AboutUs = () =>  (
-  <section className={`my-20 ${layout.section}`}>
+  <section className={`my-4 ss:my-20 ${layout.section2}`}>
     <div className={layout.sectionInfo}>
       <div className={`${styles.heading2}`}>
         About MATIC<span className="text-gradient">DRIVE</span> 
@@ -30,13 +28,10 @@ const AboutUs = () =>  (
         Alongside, we believe in building infrastructure around transportation in Africa 
         and taking it to the next level with our AVs.
       </p>
-      <Link to="/contactus">
-        <Button styles={`mt-4`} />
-      </Link>
       
     </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
+    <div className={`${layout.sectionImg2} flex-col`}>
       {features.map((feature, index) => (
         <FeatureCard key={feature.id} {...feature} index={index} />
       ))}
