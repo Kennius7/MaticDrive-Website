@@ -7,6 +7,7 @@ import { LikeArticles } from "../../components";
 import { Link } from 'react-router-dom';
 import styles from '../../style';
 import { people06 } from '../../assets';
+import parse from 'html-react-parser';
 
 
 function Articles() {
@@ -57,7 +58,7 @@ function Articles() {
                   
                   <div className='font-bold text-[20px]'>{title}</div>
                   <div className='font-semibold text-[17px]'>{description}</div>
-                  <div>{postContent}</div>
+                  <div>{parse(postContent)}</div>
                   <div className="mt-8">{createdBy && 
                     (<div>
                       <span className="text-[15px]">Created by: </span> 

@@ -6,6 +6,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from 'react-router-dom';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import parse from "html-react-parser";
+
 
 
 
@@ -16,22 +20,24 @@ function ArticlesForm() {
     title: "",
     description: "",
     imageUrl: "",
-    postContent: "",
     createdAt: Timestamp.now().toDate(),
   });
+  const [postContent, setPostContent] = useState("");
   const [progress, setProgress] = useState(0);
+  
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   }
+
 
   const handleImageChange = (e) => {
     setFormData({ ...formData, imageUrl: e.target.files[0] })
   }
 
   const handlePublish = () => {
-    if (!formData.title || !formData.description || !formData.imageUrl) {
-      alert("Please fill out all necessary fields")
+    if (!formData.title || !formData.description || !formData.imageUrl || !postContent) {
+      toast("Please fill out all necessary fields", {type: "error"})
       return;
     }
 
@@ -42,32 +48,34 @@ function ArticlesForm() {
     uploadImage.on("state_changed", (snapshot) => {
       const progressPercent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
       setProgress(progressPercent);
-    }, (err) => console.log(err), 
-    () => {
-      setFormData({title: "", description: "", postContent: "", imageUrl: ""});
-      getDownloadURL(uploadImage.snapshot.ref)
-      .then((url) => {
-      const articleRef = collection(db, "Posts");
-      addDoc(articleRef, {
-        title: formData.title,
-        description: formData.description,
-        imageUrl: url,
-        postContent: formData.postContent,
-        createdAt: Timestamp.now().toDate(),
-        createdBy: user.displayName,
-        userId: user.uid,
-        likes: [],
-        comments: [],
-      })
-      .then(() => {
-        toast("Article submitted successfully", { type: "success", position: toast.POSITION.TOP_RIGHT })
-        setProgress(0)
-      })
-      .catch((err) => {
-        toast("Error submitting article!", { type: "error", position: toast.POSITION.TOP_RIGHT })
-      })
-      })}
-      )
+    }, (err) => console.log(err),
+      () => {
+        setFormData({ title: "", description: "", imageUrl: "" });
+        setPostContent("");
+        getDownloadURL(uploadImage.snapshot.ref)
+          .then((url) => {
+            const articleRef = collection(db, "Posts");
+            addDoc(articleRef, {
+              title: formData.title,
+              description: formData.description,
+              imageUrl: url,
+              postContent: postContent,
+              createdAt: Timestamp.now().toDate(),
+              createdBy: user.displayName,
+              userId: user.uid,
+              likes: [],
+              comments: [],
+            })
+              .then(() => {
+                toast("Article submitted successfully", { type: "success", position: toast.POSITION.TOP_RIGHT })
+                setProgress(0)
+              })
+              .catch((err) => {
+                toast("Error submitting article!", { type: "error", position: toast.POSITION.TOP_RIGHT })
+              })
+          })
+      }
+    )
   }
 
 
@@ -76,45 +84,60 @@ function ArticlesForm() {
 
   return (
     <div className='text-white flex flex-col'>
-      
+
       {
-        !user ? <div className='flex flex-col justify-center items-center p-2 mx-4 mb-56 mt-60 bg-black-gradient-2 rounded-[10px] box-shadow'>
-                  <span className='font-semibold my-4 text-[22px]'><Link className='text-[30px] text-gradient' to="/signin">Login</Link> to access Blog Section</span>
-                  <div className="font-semibold mb-4">Don't have an account? <Link className='text-gradient' to="/signup">Sign up</Link></div>
-                </div> : <div>
-                <div className='my-4 font-bold text-[25px] text-center'>Create Article</div>
-                  <div className='flex flex-col mb-4'>
-                    <label htmlFor="">Title</label>
-                    <input className='bg-white text-primary placeholder-gray-300' placeholder='Post Title' type='text' name='title' value={formData.title} onChange={(e) => handleChange(e)} />
-                  </div>
-                  
-                  <div className='flex flex-col mb-4'>
-                    <label htmlFor="">Description</label>
-                    <textarea className='bg-white text-primary placeholder-gray-300' placeholder='Post Description' name="description" value={formData.description} onChange={(e) => handleChange(e)} />
-                  </div>
-                  
-                  <div className='flex flex-col mb-4'>
-                    <label htmlFor="">Post</label>
-                    <textarea className='bg-white text-primary placeholder-gray-300' placeholder='Post Content' name="postContent" value={formData.postContent} onChange={(e) => handleChange(e)} />
-                  </div>
-                  
+        !user ? 
+        <div className='flex flex-col justify-center items-center p-2 mx-4 mb-56 mt-60 bg-black-gradient-2 rounded-[10px] box-shadow'>
+          <span className='font-semibold my-4 text-[22px]'><Link className='text-[30px] text-gradient' to="/signin">Login</Link> to access Blog Section</span>
+          <div className="font-semibold mb-4">Don't have an account? <Link className='text-gradient' to="/signup">Sign up</Link></div>
+        </div> : 
+        <div className='flex justify-center items-center'>
+          <div className="flex flex-col justify-center items-center w-[350px]">
+            <div className='my-4 font-bold text-[25px] text-center'>Create Article</div>
+            <div className='flex flex-col mb-4 w-full'>
+              <label htmlFor="">Title</label>
+              <textarea className='bg-white text-primary placeholder-gray-300' placeholder='Post Title' type='text' name='title' value={formData.title} onChange={(e) => handleChange(e)} />
+            </div>
 
-                  <label htmlFor="">Image</label>
-                  <input type='file' name='image' accept='image/*' onChange={(e) => handleImageChange(e)} />
+            <div className='flex flex-col mb-4 w-full'>
+              <label htmlFor="">Description</label>
+              <textarea className='bg-white text-primary placeholder-gray-300' placeholder='Post Description' name="description" value={formData.description} onChange={(e) => handleChange(e)} />
+            </div>
 
-                  {progress === 0 ? null : (
-                    <div className="">
-                      <div className="progress">
-                        <div className={`w-[${progress}%] h-[20px] bg-blue-300 progress-bar progress-bar-striped`}>{`Uploading Image ${progress}%`}</div>
-                      </div>
-                    </div>
-                  )}
+            <div className='flex flex-col mb-6'>
+              <div className="ml-40 text-[50px] text-white my-72">Post Content</div>
+              <CKEditor
+                editor={ClassicEditor}
+                data={postContent}
+                onChange={(event, editor) => {
+                  const data = editor.getData();
+                  setPostContent(data);
+                }}
+                className="CKEditor"
+              />
+            </div>
 
-                  <button className='w-[100px] h-[30px] rounded-[8px] bg-blue-500 mt-10' onClick={handlePublish}>Publish</button>
+            <div className='text-blue-500 w-full h-[100px] bg-red-200 my-16'>
+              {parse(postContent)}
+            </div>
+
+
+            <label htmlFor="">Image</label>
+            <input type='file' name='image' accept='image/*' onChange={(e) => handleImageChange(e)} />
+
+            {progress === 0 ? null : (
+              <div className="">
+                <div className="progress">
+                  <div className={`w-[${progress}%] h-[20px] bg-blue-300 progress-bar progress-bar-striped`}>{`Uploading Image ${progress}%`}</div>
                 </div>
+              </div>
+            )}
+
+            <button className='w-[100px] h-[30px] rounded-[8px] bg-blue-500 mt-10' onClick={handlePublish}>Publish</button>
+          </div>
+        </div>
       }
 
-      
     </div>
   )
 }
